@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duplicate Test Cases Report - TestLens</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a2332;
+      --surface-hover: #232f42;
+      --border: #2d3a4f;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --accent-dim: #388bfd66;
+      --success: #3fb950;
+      --warning: #d29922;
+      --danger: #f85149;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.5;
+    }
+    .container { max-width: 960px; margin: 0 auto; }
+    h1 { font-size: 1.75rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; }
+    .stats {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      padding: 1rem 1.25rem;
+      background: var(--surface);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .stat { display: flex; flex-direction: column; gap: 0.25rem; }
+    .stat-value { font-size: 1.5rem; font-weight: 600; color: var(--accent); }
+    .stat-label { font-size: 0.8rem; color: var(--text-muted); }
+    section {
+      margin-bottom: 2.5rem;
+      padding: 1.25rem;
+      background: var(--surface);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    section h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .dup-group {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: var(--surface-hover);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .dup-group:last-child { margin-bottom: 0; }
+    .group-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .group-ids { font-weight: 600; color: var(--accent); }
+    .sim-badge {
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    .sim-badge.high { background: var(--success); color: #fff; }
+    .sim-badge.medium { background: var(--warning); color: #0d1117; }
+    .sim-badge.low { background: var(--danger); color: #fff; }
+    .group-cards { display: flex; flex-direction: column; gap: 1rem; }
+    .tc-card {
+      padding: 1rem;
+      background: var(--bg);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .tc-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .tc-key { font-weight: 600; color: var(--accent); }
+    .tc-folder { font-size: 0.85rem; color: var(--text-muted); }
+    .tc-priority {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.4rem;
+      background: var(--accent-dim);
+      border-radius: 4px;
+    }
+    .tc-body p { margin: 0.5rem 0; font-size: 0.9rem; }
+    .tc-summary { color: var(--text); }
+    .tc-normalized { color: var(--text-muted); font-size: 0.85rem; }
+    details.tc-steps { margin-top: 0.75rem; }
+    summary { cursor: pointer; font-size: 0.85rem; color: var(--text-muted); }
+    .steps-content { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .steps-content ol { margin: 0; padding-left: 1rem; }
+    .steps-content li { margin: 0.35rem 0; font-size: 0.85rem; }
+    .step-num { font-weight: 500; color: var(--accent); margin-right: 0.25rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Duplicate Test Cases Report</h1>
+    <p class="meta">Generated on 2026-03-16 11:53 · TestLens AI</p>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-value">73</span>
+        <span class="stat-label">Total test cases</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">2</span>
+        <span class="stat-label">Duplicate groups (normalized summary)</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">3</span>
+        <span class="stat-label">Duplicate groups (embedding similarity)</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">6</span>
+        <span class="stat-label">Test cases in duplicate groups</span>
+      </div>
+    </div>
+
+    <section>
+      <h2>📝 By Normalized Summary</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+        Test cases with identical normalized summaries (same semantic goal).
+      </p>
+      
+    <div class="dup-group">
+      <div class="group-header">
+        <span class="group-ids">GQA-TC-15877, GQA-TC-15878</span>
+        
+      </div>
+      <div class="group-cards">
+        
+    <div class="tc-card">
+      <div class="tc-header">
+        <span class="tc-key">GQA-TC-15877</span>
+        <span class="tc-folder">Change Plan</span>
+        <span class="tc-priority">P0</span>
+      </div>
+      <div class="tc-body">
+        <p class="tc-summary"><strong>Summary:</strong> Change Plan - Upgrade Plan</p>
+        <p class="tc-normalized"><strong>Normalized:</strong> Validates am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans and am displayed the relevant Platform Billing flow to step through for existing Subscriber signed into BEAM upon selecting &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen.</p>
+        <details class="tc-steps">
+          <summary>Step details</summary>
+          <div class="steps-content"><ol><li><span class="step-num">step_1</span> GIVEN I am an existing Subscriber signed into BEAM</li><li><span class="step-num">step_2</span> WHEN I select &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen</li><li><span class="step-num">step_3</span> THEN I am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans available for me to move to with the Current Plan displayed as &#x27;Current Plan&#x27;</li><li><span class="step-num">step_4</span> WHEN I select a Plan which is not my Current Plan to Upgrade to and I select &#x27;Continue&#x27;</li><li><span class="step-num">step_6</span> *AND* I am displayed the relevant Platform Billing flow to step through 
+
+||*Web*|Web screens| |
+||*Mobile Web*|Mobile Web screens| |
+||*iOS Mobile*|Apple IAP| |
+||*tvOS*|Apple IAP| |
+||*Andoid Mobile*|Google IAP| |
+||*Andoid TV*|Google IAP| |
+||*Roku*|Roku Pay| |
+||*Fire TV*|Amazon| |
+||*Fire Tablet*|Amazon| |
+||*Samsung*|Samsung IAP| |
+||*Vizio*|Web screens| |
+||*XBox*|Web screens| |
+||*Playstation*|Web screens| |
+||*LG*|Web screens|| ||
+
+</li></ol></div>
+        </details>
+      </div>
+    </div>
+    
+    <div class="tc-card">
+      <div class="tc-header">
+        <span class="tc-key">GQA-TC-15878</span>
+        <span class="tc-folder">Change Plan</span>
+        <span class="tc-priority">P0</span>
+      </div>
+      <div class="tc-body">
+        <p class="tc-summary"><strong>Summary:</strong> Change Plan - Downgrade Plan</p>
+        <p class="tc-normalized"><strong>Normalized:</strong> Validates am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans and am displayed the relevant Platform Billing flow to step through for existing Subscriber signed into BEAM upon selecting &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen.</p>
+        <details class="tc-steps">
+          <summary>Step details</summary>
+          <div class="steps-content"><ol><li><span class="step-num">step_1</span> GIVEN I am an existing Subscriber signed into BEAM</li><li><span class="step-num">step_2</span> WHEN I select &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen</li><li><span class="step-num">step_3</span> THEN I am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans available for me to move to with the Current Plan displayed as &#x27;Current Plan&#x27;</li><li><span class="step-num">step_4</span> WHEN I select a Plan which is not my Current Plan to Downgrade to and I select &#x27;Continue&#x27;</li><li><span class="step-num">step_6</span> AND I am displayed the relevant Platform Billing flow to step through 
+ |||||||
+ |||Web|Web screens|  |
+ |||Mobile Web|Mobile Web screens|  |
+ |||iOS Mobile|Apple IAP|  |
+ |||tvOS|Apple IAP|  |
+ |||Android Mobile|Google IAP|  |
+ |||Android TV|Google IAP|  |
+ |||Roku|Roku Pay|  |
+ |||Fire TV|Amazon|  |
+ |||Fire Tablet|Amazon|  |
+ |||Samsung|Samsung IAP|  |
+ |||Vizio|Web screens|  |
+ |||XBox|Web screens|  |
+ |||Playstation|Web screens|  |
+ |||LG|Web screens|</li></ol></div>
+        </details>
+      </div>
+    </div>
+    
+      </div>
+    </div>
+    
+    <div class="dup-group">
+      <div class="group-header">
+        <span class="group-ids">GQA-TC-15881, GQA-TC-15880</span>
+        
+      </div>
+      <div class="group-cards">
+        
+    <div class="tc-card">
+      <div class="tc-header">
+        <span class="tc-key">GQA-TC-15881</span>
+        <span class="tc-folder">Web Purchase Flow</span>
+        <span class="tc-priority">P1</span>
+      </div>
+      <div class="tc-body">
+        <p class="tc-summary"><strong>Summary:</strong> DTC Change Plan - Downgrade Plan</p>
+        <p class="tc-normalized"><strong>Normalized:</strong> Validates am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans and am displayed a &#x27;Confirm Plan Change&#x27; screen where I can select for existing Subscriber signed into BEAM upon selecting &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen.</p>
+        <details class="tc-steps">
+          <summary>Step details</summary>
+          <div class="steps-content"><ol><li><span class="step-num">step_1</span> GIVEN I am an existing Subscriber signed into BEAM</li><li><span class="step-num">step_2</span> WHEN I select &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen</li><li><span class="step-num">step_3</span> THEN I am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans available for me to move to with the Current Plan displayed as &#x27;Current Plan&#x27;</li><li><span class="step-num">step_4</span> WHEN I select a Plan which is not my Current Plan to Downgrade to and I select &#x27;Continue&#x27;</li><li><span class="step-num">step_5</span> THEN I am displayed a &#x27;Confirm Plan Change&#x27; screen where I can select &#x27;Confirm Change&#x27; CTA or &#x27;Cancel&#x27; (which shows the Subscription screen)</li><li><span class="step-num">step_7</span> AND I can select the &#x27;Confirm Change&#x27; CTA which processes the change request and displays a spinner</li><li><span class="step-num">step_9</span> AND &#x27;Change Plan&#x27; cannot be selected on the Subscription page</li><li><span class="step-num">step_10</span> AND the &#x27;Upcoming Payments&#x27; section is displayed with details of the new plans payment required</li></ol></div>
+        </details>
+      </div>
+    </div>
+    
+    <div class="tc-card">
+      <div class="tc-header">
+        <span class="tc-key">GQA-TC-15880</span>
+        <span class="tc-folder">Web Purchase Flow</span>
+        <span class="tc-priority">P0</span>
+      </div>
+      <div class="tc-body">
+        <p class="tc-summary"><strong>Summary:</strong> DTC Change Plan - Upgrade Plan</p>
+        <p class="tc-normalized"><strong>Normalized:</strong> Validates am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans and am displayed a &#x27;Confirm Plan Change&#x27; screen where I can select for existing Subscriber signed into BEAM upon selecting &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen.</p>
+        <details class="tc-steps">
+          <summary>Step details</summary>
+          <div class="steps-content"><ol><li><span class="step-num">step_1</span> GIVEN I am an existing Subscriber signed into BEAM</li><li><span class="step-num">step_2</span> WHEN I select &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen</li><li><span class="step-num">step_3</span> THEN I am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans available for me to move to with the Current Plan displayed as &#x27;Current Plan&#x27;</li><li><span class="step-num">step_4</span> WHEN I select a Plan which is not my Current Plan to Upgrade to and I select &#x27;Continue&#x27;</li><li><span class="step-num">step_5</span> THEN I am displayed a &#x27;Confirm Plan Change&#x27; screen where I can select &#x27;Confirm Change&#x27; CTA or &#x27;Cancel&#x27; (which shows the Subscription screen)</li><li><span class="step-num">step_7</span> AND I can select the &#x27;Confirm Change&#x27; CTA which processes the change request and displays a spinner</li></ol></div>
+        </details>
+      </div>
+    </div>
+    
+      </div>
+    </div>
+    
+    </section>
+
+    <section>
+      <h2>🔢 By Embedding Similarity</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+        Test cases with embedding cosine similarity ≥ 92% (semantic near-duplicates).
+      </p>
+      
+    <div class="dup-group">
+      <div class="group-header">
+        <span class="group-ids">GQA-TC-15877, GQA-TC-15878</span>
+        <span class="sim-badge high">100.0% similar</span>
+      </div>
+      <div class="group-cards">
+        
+    <div class="tc-card">
+      <div class="tc-header">
+        <span class="tc-key">GQA-TC-15877</span>
+        <span class="tc-folder">Change Plan</span>
+        <span class="tc-priority">P0</span>
+      </div>
+      <div class="tc-body">
+        <p class="tc-summary"><strong>Summary:</strong> Change Plan - Upgrade Plan</p>
+        <p class="tc-normalized"><strong>Normalized:</strong> Validates am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans and am displayed the relevant Platform Billing flow to step through for existing Subscriber signed into BEAM upon selecting &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen.</p>
+        <details class="tc-steps">
+          <summary>Step details</summary>
+          <div class="steps-content"><ol><li><span class="step-num">step_1</span> GIVEN I am an existing Subscriber signed into BEAM</li><li><span class="step-num">step_2</span> WHEN I select &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen</li><li><span class="step-num">step_3</span> THEN I am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans available for me to move to with the Current Plan displayed as &#x27;Current Plan&#x27;</li><li><span class="step-num">step_4</span> WHEN I select a Plan which is not my Current Plan to Upgrade to and I select &#x27;Continue&#x27;</li><li><span class="step-num">step_6</span> *AND* I am displayed the relevant Platform Billing flow to step through 
+
+||*Web*|Web screens| |
+||*Mobile Web*|Mobile Web screens| |
+||*iOS Mobile*|Apple IAP| |
+||*tvOS*|Apple IAP| |
+||*Andoid Mobile*|Google IAP| |
+||*Andoid TV*|Google IAP| |
+||*Roku*|Roku Pay| |
+||*Fire TV*|Amazon| |
+||*Fire Tablet*|Amazon| |
+||*Samsung*|Samsung IAP| |
+||*Vizio*|Web screens| |
+||*XBox*|Web screens| |
+||*Playstation*|Web screens| |
+||*LG*|Web screens|| ||
+
+</li></ol></div>
+        </details>
+      </div>
+    </div>
+    
+    <div class="tc-card">
+      <div class="tc-header">
+        <span class="tc-key">GQA-TC-15878</span>
+        <span class="tc-folder">Change Plan</span>
+        <span class="tc-priority">P0</span>
+      </div>
+      <div class="tc-body">
+        <p class="tc-summary"><strong>Summary:</strong> Change Plan - Downgrade Plan</p>
+        <p class="tc-normalized"><strong>Normalized:</strong> Validates am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans and am displayed the relevant Platform Billing flow to step through for existing Subscriber signed into BEAM upon selecting &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen.</p>
+        <details class="tc-steps">
+          <summary>Step details</summary>
+          <div class="steps-content"><ol><li><span class="step-num">step_1</span> GIVEN I am an existing Subscriber signed into BEAM</li><li><span class="step-num">step_2</span> WHEN I select &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen</li><li><span class="step-num">step_3</span> THEN I am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans available for me to move to with the Current Plan displayed as &#x27;Current Plan&#x27;</li><li><span class="step-num">step_4</span> WHEN I select a Plan which is not my Current Plan to Downgrade to and I select &#x27;Continue&#x27;</li><li><span class="step-num">step_6</span> AND I am displayed the relevant Platform Billing flow to step through 
+ |||||||
+ |||Web|Web screens|  |
+ |||Mobile Web|Mobile Web screens|  |
+ |||iOS Mobile|Apple IAP|  |
+ |||tvOS|Apple IAP|  |
+ |||Android Mobile|Google IAP|  |
+ |||Android TV|Google IAP|  |
+ |||Roku|Roku Pay|  |
+ |||Fire TV|Amazon|  |
+ |||Fire Tablet|Amazon|  |
+ |||Samsung|Samsung IAP|  |
+ |||Vizio|Web screens|  |
+ |||XBox|Web screens|  |
+ |||Playstation|Web screens|  |
+ |||LG|Web screens|</li></ol></div>
+        </details>
+      </div>
+    </div>
+    
+      </div>
+    </div>
+    
+    <div class="dup-group">
+      <div class="group-header">
+        <span class="group-ids">GQA-TC-15881, GQA-TC-15880</span>
+        <span class="sim-badge high">100.0% similar</span>
+      </div>
+      <div class="group-cards">
+        
+    <div class="tc-card">
+      <div class="tc-header">
+        <span class="tc-key">GQA-TC-15881</span>
+        <span class="tc-folder">Web Purchase Flow</span>
+        <span class="tc-priority">P1</span>
+      </div>
+      <div class="tc-body">
+        <p class="tc-summary"><strong>Summary:</strong> DTC Change Plan - Downgrade Plan</p>
+        <p class="tc-normalized"><strong>Normalized:</strong> Validates am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans and am displayed a &#x27;Confirm Plan Change&#x27; screen where I can select for existing Subscriber signed into BEAM upon selecting &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen.</p>
+        <details class="tc-steps">
+          <summary>Step details</summary>
+          <div class="steps-content"><ol><li><span class="step-num">step_1</span> GIVEN I am an existing Subscriber signed into BEAM</li><li><span class="step-num">step_2</span> WHEN I select &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen</li><li><span class="step-num">step_3</span> THEN I am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans available for me to move to with the Current Plan displayed as &#x27;Current Plan&#x27;</li><li><span class="step-num">step_4</span> WHEN I select a Plan which is not my Current Plan to Downgrade to and I select &#x27;Continue&#x27;</li><li><span class="step-num">step_5</span> THEN I am displayed a &#x27;Confirm Plan Change&#x27; screen where I can select &#x27;Confirm Change&#x27; CTA or &#x27;Cancel&#x27; (which shows the Subscription screen)</li><li><span class="step-num">step_7</span> AND I can select the &#x27;Confirm Change&#x27; CTA which processes the change request and displays a spinner</li><li><span class="step-num">step_9</span> AND &#x27;Change Plan&#x27; cannot be selected on the Subscription page</li><li><span class="step-num">step_10</span> AND the &#x27;Upcoming Payments&#x27; section is displayed with details of the new plans payment required</li></ol></div>
+        </details>
+      </div>
+    </div>
+    
+    <div class="tc-card">
+      <div class="tc-header">
+        <span class="tc-key">GQA-TC-15880</span>
+        <span class="tc-folder">Web Purchase Flow</span>
+        <span class="tc-priority">P0</span>
+      </div>
+      <div class="tc-body">
+        <p class="tc-summary"><strong>Summary:</strong> DTC Change Plan - Upgrade Plan</p>
+        <p class="tc-normalized"><strong>Normalized:</strong> Validates am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans and am displayed a &#x27;Confirm Plan Change&#x27; screen where I can select for existing Subscriber signed into BEAM upon selecting &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen.</p>
+        <details class="tc-steps">
+          <summary>Step details</summary>
+          <div class="steps-content"><ol><li><span class="step-num">step_1</span> GIVEN I am an existing Subscriber signed into BEAM</li><li><span class="step-num">step_2</span> WHEN I select &#x27;Change Plan&#x27; from the Profile &gt; Subscription screen</li><li><span class="step-num">step_3</span> THEN I am displayed the &#x27;Change Your Plan&#x27; screen which displays all Plans available for me to move to with the Current Plan displayed as &#x27;Current Plan&#x27;</li><li><span class="step-num">step_4</span> WHEN I select a Plan which is not my Current Plan to Upgrade to and I select &#x27;Continue&#x27;</li><li><span class="step-num">step_5</span> THEN I am displayed a &#x27;Confirm Plan Change&#x27; screen where I can select &#x27;Confirm Change&#x27; CTA or &#x27;Cancel&#x27; (which shows the Subscription screen)</li><li><span class="step-num">step_7</span> AND I can select the &#x27;Confirm Change&#x27; CTA which processes the change request and displays a spinner</li></ol></div>
+        </details>
+      </div>
+    </div>
+    
+      </div>
+    </div>
+    
+    <div class="dup-group">
+      <div class="group-header">
+        <span class="group-ids">GQA-TC-15889, GQA-TC-15887</span>
+        <span class="sim-badge high">100.0% similar</span>
+      </div>
+      <div class="group-cards">
+        
+    <div class="tc-card">
+      <div class="tc-header">
+        <span class="tc-key">GQA-TC-15889</span>
+        <span class="tc-folder">Watch and Playback experience</span>
+        <span class="tc-priority">P0</span>
+      </div>
+      <div class="tc-body">
+        <p class="tc-summary"><strong>Summary:</strong> Verify Live Sport/Entertainment  playable across all subscription  tiers</p>
+        <p class="tc-normalized"><strong>Normalized:</strong> Validates playback should happen from the live point irrespective of the program status for am unauthenticated user when playing Live Sports / Entertainment content.</p>
+        <details class="tc-steps">
+          <summary>Step details</summary>
+          <div class="steps-content"><ol><li><span class="step-num">step_1</span> GIVEN I am unauthenticated user.</li><li><span class="step-num">step_2</span> WHEN I play Live Sports / Entertainment content with any &lt;subscription tier&gt;
+
+||*_subscription tier_*||
+||*With Ads (monthly / yearly)*||
+||*With Ads + Sports (monthly / yearly)*||
+||*Ad-Free (monthly / yearly)*||
+||*Ad-Free + Sports (monthly/yearly)*||
+||*ultimate Ad-free (monthly / yearly)*||
+||*Ultimate Ad-free + Sports (monthly /yearly)*||
+
+</li><li><span class="step-num">step_3</span> THEN playback should happen from the live point irrespective of the program status</li></ol></div>
+        </details>
+      </div>
+    </div>
+    
+    <div class="tc-card">
+      <div class="tc-header">
+        <span class="tc-key">GQA-TC-15887</span>
+        <span class="tc-folder">Watch and Playback experience</span>
+        <span class="tc-priority">P0</span>
+      </div>
+      <div class="tc-body">
+        <p class="tc-summary"><strong>Summary:</strong> Verify Live Linear playable across all subscription  tiers</p>
+        <p class="tc-normalized"><strong>Normalized:</strong> Validates playback should happen from the live point irrespective of the program status for am unauthenticated user when playing Live Linear channel.</p>
+        <details class="tc-steps">
+          <summary>Step details</summary>
+          <div class="steps-content"><ol><li><span class="step-num">step_1</span> GIVEN I am unauthenticated user.</li><li><span class="step-num">step_2</span> WHEN I play Live Linear channel with any &lt;subscription tier&gt;
+ |||_subscription tier_||
+ |||With Ads (monthly)|
+ |||With Ads + Sports (monthly)|
+ |||Ad-Free (monthly)|
+ |||Ad-Free + Sports (monthly)|
+ |||ultimate Ad-free (monthly)|
+ |||Ultimate Ad-free + Sports (monthly)|</li><li><span class="step-num">step_3</span> THEN playback should happen from the live point irrespective of the program status</li></ol></div>
+        </details>
+      </div>
+    </div>
+    
+      </div>
+    </div>
+    
+    </section>
+  </div>
+</body>
+</html>
