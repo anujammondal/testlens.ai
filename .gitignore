@@ -2,3 +2,5 @@
 qmetry_testcases.json
 qmetry_testcases_embeddings.json
 qmetry_embeddings.npy
+src/qMetryIntegration/__pycache__/findDuplicateTestCases.cpython-314.pyc
+duplicate_testcases_report.html
