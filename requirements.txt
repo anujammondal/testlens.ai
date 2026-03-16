@@ -1,0 +1,13 @@
+# TestLens / QMetry Integration
+# Python 3.11+
+
+# API & config
+requests>=2.28.0
+python-dotenv>=1.0.0
+
+# Embeddings & duplicate detection
+sentence-transformers>=2.2.0
+numpy>=1.24.0
+
+# Optional: Qdrant vector DB (for uploadToQdrant, searchQdrant)
+qdrant-client>=1.7.0
