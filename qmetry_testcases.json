@@ -1,0 +1,3013 @@
+{
+  "projectId": "10081",
+  "parentFolder": {
+    "id": "1134263",
+    "name": "Approved P0"
+  },
+  "testcases": [
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "dxgyuqVqid4Yr6",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15863",
+      "folder": {
+        "id": "1134264",
+        "name": "Global Navigation"
+      },
+      "summary": "Kids profile user - Validate global navigation menu",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "And I select a Kids profile",
+        "step_3": "When I access the menu",
+        "step_4": "THEN for <device> I see correspondingly  Menu Item <menuItems> ",
+        "step_5": "And I am able to navigate to <menuItems> and the selected item gets highlighted"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "OJabCNMNHvDMGd",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15862",
+      "folder": {
+        "id": "1134264",
+        "name": "Global Navigation"
+      },
+      "summary": "Standard profile user - Validate global navigation menu",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "And I select a standard profile",
+        "step_3": "WHEN I access the  menu",
+        "step_4": "Then I observe the applicable <menuItems> listed for navigation for corresponding <device>",
+        "step_5": "And I am able to navigate to <menuItems>",
+        "step_6": "And I see the expected <menuItems> item on nav bar is highlighted for the page I navigated to for corresponding <device>"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": ""
+      },
+      "stepsCount": 6
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "L4ARFwvwsaxKD2",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15864",
+      "folder": {
+        "id": "1134265",
+        "name": "My Stuff"
+      },
+      "summary": "Authenticated new user-Verify My list functionality",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "*GIVEN* I Launch the app as new authenticated user",
+        "step_2": "AND I Add an asset to My List from any asset details page",
+        "step_3": "*WHEN* I select My Stuff",
+        "step_4": "*AND* I select My List tab",
+        "step_5": "*THEN* I Should see the show is added to my list and MyList Rail."
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "//should only use asset that is NOT already added to My List. May need to check state of button and only select if it is a +",
+        "step_3": "",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "P5mYUEqEs4Ggnq",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15865",
+      "folder": {
+        "id": "1134266",
+        "name": "Continue Watching"
+      },
+      "summary": "Validate Continue watching rail update behavior on Homepage",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "WHEN I watch a <assetType> for more than 15 seconds",
+        "step_3": "AND I access the same content from Continue Watching rail on  HomePage",
+        "step_4": "THEN It should resume from same the point it left previously"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "* A/B Experiment - *temporary*\n* As per [https://wbdstreaming.atlassian.net/browse/CDB-504|https://wbdstreaming.atlassian.net/browse/CDB-504] - [Experiment] Continue Watching - Episodic Art vs. Series Art\n* as of version 5.4 for Max\n* this change would be to display series art instead of episodic art *for Episodes* within Continue Watching”\n* in order to see the experience, a special user account is needed, right now I have a prod acct [Pro.us|http://pro.us/].[+prod.adfree5@wbd.com+|mailto:prod.adfree5@wbd.com] Pro$Team358!\n\n"
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "5ypQTZbZsmZJYz",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15868",
+      "folder": {
+        "id": "1134267",
+        "name": "Onboarding, Registration and Sign in"
+      },
+      "summary": "Validate Lapsed/Inactive Subscription screen when user is signed in with lapsed user account",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I launch Beam app as an unauthenticated user",
+        "step_2": "WHEN I navigate to SIGN IN screen",
+        "step_3": "AND I SIGN IN with lapsed/expired user account\n\n||*_Region_*||*_Sign in page_*||*_Action_*||\n||*US,LATAM,EMEA & APAC CTV via email ID flow*|Enter email and PWD|Click sign in|\n||*APAC WEMO Via email&PWD*|Enter Email on sign in page 1 and PWD in page 2|Click sign in|\n||*APAC WEMO via mobile # & APAC CTV via mobile # flow*\n*Note: NA in Australia*|Enter Mobile number>Enter OTP which is received|Click submit|\n\n",
+        "step_4": "THEN I should see Lapsed/Inactive subscription screen with these mandatory data: ‹data› ‹type›\n\n||data|type|\n||Welcome back, {name}!|text|\n||Renew Subscription|CTA|\n||Connect Your Provider (Only US and LATAM regions will see this)|CTA|\n||Need help? Visit {help url}|link|\n\n"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "???0???   ???1???   ???2???",
+        "step_4": "Note:\nAt APAC launch in Taiwan the Renew Subscription CTA on Web and LG (DTC) will be disabled due to [GCX-79420|https://wbdstreaming.atlassian.net/browse/GCX-79420]\n\n*Note:* \"Connect your provider\" CTA or associated copy is not visible on the lapsed user wall for APAC Wave4 countries"
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "oZvlFjNjU7LQmd",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15867",
+      "folder": {
+        "id": "1134267",
+        "name": "Onboarding, Registration and Sign in"
+      },
+      "summary": "Verify Signout from setting page",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "WHEN I select an Adult Profile",
+        "step_3": "AND I select Sign Out",
+        "step_4": "THEN I sign out of the device and land on <page> for the corresponding <platform>"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": ""
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 3,
+      "id": "DPYKfqLqi3xkWv",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15866",
+      "folder": {
+        "id": "1134267",
+        "name": "Onboarding, Registration and Sign in"
+      },
+      "summary": "Validate SIGN IN with multi user profile",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I launch Beam app as an unauthenticated user",
+        "step_2": "WHEN I navigate to SIGN IN screen\n\n\nNote: In EMEA and APAC users will not see Get started screen instead they land on sign in page directly",
+        "step_3": "AND in <Region> via <Option> I SIGN IN with authorized multi user profile account.\n\n||*_Region_*||*_Option_*||\n||*US, LATAM, EMEA and APAC CTV via email Address*|Email and Password|\n||*APAC, US CTV via mobile number*|Mobile number|\n||*APAC, US WEMO*|User enters email ID to enter Email ID Pwd flow or Enters mobile number with country code to enter mobile sign in flow. Password or OTP is entered in next screen and click submit|\n\n*Note: For CTV please check  Remote/Keyboard, Wifi AND QR Code.*",
+        "step_4": "THEN I should land either on who's watching screen / profile picker screen or home screen with last selected profile as active profile",
+        "step_5": "AND I select any profile",
+        "step_6": "THEN I should land on home screen"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "APAC\nWEMO\nEmail\nid\nflow\nAPAC\nWEMO\nMobile\n#\nflow\nAPAC\nCTV\nMobile\n#\nflow",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "Home screen should be seen"
+      },
+      "stepsCount": 6
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "vvNguoWoszjyld",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15874",
+      "folder": {
+        "id": "1134268",
+        "name": "MVPD"
+      },
+      "summary": "MVPD flow - link existing DTC, IAP and MVPD  to MVPD",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I launch the Beam app as an unauthenticated user",
+        "step_2": "WHEN I select to connect with my TV provider",
+        "step_3": "AND I select my provider and Sign in to the MVPD provider with the 3rd party credentials.",
+        "step_4": "AND After I authenticate on the partner site will redirect back to beam in the create account page with <fields> and fill in my existing account\n |||  | <Fields> |\n ||| First Name|\n ||| Last Name|\n ||| Email |\n |||Optional Password  - only required for MVPD|",
+        "step_5": "AND I will land on the (Account found) page with 2 <CTA>\n\n||verify the email address||\n||create a new account||\n\n Note :FPO Copy We found an existing account that uses this email address. You can link this account to your HBO Max subscription provided by <provider longname> and use your <provider longname> username and password to sign in to HBO Max. Please note that this change will not cancel any subscriptions for HBO Max that you may have with any other providers. To link your accounts, verify your email address. If you don't want to link accounts, create a new HBO Max account with a different email address.",
+        "step_6": "AND I Select Verify Email Address\n Note: This action will trigger an email containing a six-digit OTP code",
+        "step_7": "AND I see an \"Enter OTP\" screen with 2 <CTA2>\n |||||\n ||| Submit code|\n ||| resend One-time code|",
+        "step_8": "AND I enter a one-time code and hit the \"Link Accounts\" button.\n Hitting the link accounts button add the new MVPD subscription to this account. If you previously had a DTC subscription, it will cancel that subscription. Pre-existing IAP and MVPD accounts will not be cancelled.",
+        "step_9": "AND I land on the \nconfirm connect your account with 2 <CTV>\n\n||Confirm||\n||Cancel||\n\n confirm connect your account\n\n||_ User_||*_confirm connect account page _*||\n||*DTC*||\n||MVPD and IAP||\n\n",
+        "step_10": "AND I select the confirm CTA to link my account",
+        "step_11": "AND I will land on a Success page with my subscription details",
+        "step_12": "THEN I will land on the Who's Watching profile picker screen",
+        "step_13": "AND when I select a profile and navigate to the Subscription page in settings",
+        "step_14": "*UK* Only\n\nAND *The MVPD Account Linking Email* will contain messaging informing the user that they may be double billed."
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "",
+        "step_7": "",
+        "step_8": "",
+        "step_9": "",
+        "step_10": "",
+        "step_11": "",
+        "step_12": "",
+        "step_13": "If I linked a DTC account, I will see only see the new MVPD subscription on the subscription page - the DTC account will have been cancelled.\n If I linked an IAP or MVPD account, I will see two subscriptions on the subscription page, both the old subscription and the new subscription.",
+        "step_14": ""
+      },
+      "stepsCount": 14
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "mZazFxdxSP632x",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15873",
+      "folder": {
+        "id": "1134268",
+        "name": "MVPD"
+      },
+      "summary": "Happy Path - Verify MVPD registration via Apple SSO",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an unauthenticated new user",
+        "step_2": "When I select connect your provider",
+        "step_3": "And I select Allow CTA on Apple SSO modal",
+        "step_4": "AND I redirect to create account page with <fields> \n |||_field_||\n ||| First Name|\n ||| Last Name|\n ||| Email|\n ||| Optional Password|",
+        "step_5": "Then I should see the all set success screen with subscription details with start streaming CTA",
+        "step_6": "And I select start streaming CTA",
+        "step_7": "And I land on who is watching page with default adult and kid profile"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "Apple permission",
+        "step_4": "TV menu on the left side is hidden so user shouldn't allow to go through the QR and TV code secondary screen flow.",
+        "step_5": "",
+        "step_6": "",
+        "step_7": ""
+      },
+      "stepsCount": 7
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 3,
+      "id": "a1baSRPRSWL4qP",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15872",
+      "folder": {
+        "id": "1134268",
+        "name": "MVPD"
+      },
+      "summary": "MVPD Sign In (3rd Party Credentials) Lapsed MVPD User Chooses To Renew Subscription via Purchase Flow",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated lapsed MVPD user\n Note:MVPD user is authenticated through their provider and chooses to continue from the lapsed paywall.",
+        "step_2": "WHEN I can see Renew Subscription paywall with ‹CTA›\n\n||<CTA>||\n||a CTA to Renew Subscription||\n||a CTA Connect to a New Provider ( Only US & Latam region will see this)||\n\n",
+        "step_3": "AND I select \"Renew Subscription\"",
+        "step_4": "THEN I will land on Purchase flow\n Note: EMEA and APAC users on STB's will take \"First, Subscribe Through PARTNER\" screen with QR code"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "Purchase flow: DTC, IAP (depends on device type)"
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 4,
+      "id": "EwZGSMWMhyKj21",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15871",
+      "folder": {
+        "id": "1134268",
+        "name": "MVPD"
+      },
+      "summary": "TV Code MVPD Sign In - Lapsed User Chooses to Renew via IAP Flow",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I  am a lapsed MVPD user",
+        "step_2": "WHEN I choose \"Connect with a Provider\" in sign in page and choose via \" Use a Code\" option\nNote: This is only applicable in US and LATAM regions. This button is not applicable on EMEA and APAC regions",
+        "step_3": "AND  I  type url into the web browser on the second device",
+        "step_4": "AND I enter  code from CTV",
+        "step_5": "AND I select my provider and Sign in to the provider with the 3rd party credentials.",
+        "step_6": "AND I can see Renew Subscription paywall with 2 CTA\n |||  | <CTA> |\n ||| with a CTA to Renew |\n ||| with a CTA Connect to a New Provider ( Only for US and LATAM regions)|\n ||| Sign out button ( Only for EMEA)|",
+        "step_7": "AND I select \"Renew\"",
+        "step_8": "Then I  will be taken to the IAP path"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "",
+        "step_7": "",
+        "step_8": ""
+      },
+      "stepsCount": 8
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 5,
+      "id": "4vykulzlTAVY2K",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15870",
+      "folder": {
+        "id": "1134268",
+        "name": "MVPD"
+      },
+      "summary": "MVPD Sign In (3rd Party Credentials) Apple SSO",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I  am an unauthenticated user",
+        "step_2": "When I  download BEAM app on my IOS/TVOS device I  see modals asking if the BEAM app can use their provider info",
+        "step_3": "AND I choose my TV provider while setting up my TVOS and/or iOS",
+        "step_4": "THEN starts the MVPD Sign In Flow they should deep link into  providers IDP page - skipping the provider pick/provider search screens"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "Note: Make sure this is not happening in LATAM , EMEA and APAC",
+        "step_3": "Note: Make sure this is not happening in  LATAM , EMEA and APAC",
+        "step_4": "Note: Make sure this is not happening in  LATAM , EMEA and APAC"
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 6,
+      "id": "Aw8pS5M5Uo6OrY",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15869",
+      "folder": {
+        "id": "1134268",
+        "name": "MVPD"
+      },
+      "summary": "MVPD Sign In (3rd Party Credentials)] Lapsed MVPD User Chooses to Connect to a new MVPD Provider With a New BEAM Account",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an MVPD lapsed user",
+        "step_2": "WHEN I see Renew Subscription paywall with  <CTA>\n\n||*<CTA>*||\n||*a CTA to Renew*||\n||*a CTA to Connect to a Provider ( Only US & LATAM regions will see this button)*||\n||*a Sign out button ( Only EMEA region will see this)*||\n\n",
+        "step_3": "AND I select \"Connect\" to New provider to land on sign in page",
+        "step_4": "AND I select Sign In with my TV provider",
+        "step_5": "THEN I Sign in to the provider IDP screen using my provider credentials",
+        "step_6": "AND After I authenticate on the partner site will redirect back to beam in the create account page with <fields> \nCTA drives to the Home logged out\n\n||*<Fields>*||\n||*First Name*||\n||*Last Name*||\n||*Email*||\n||*Optional Password  - only required for MVPD*||\n\n*Note:* enter a new email address otherwise they will see the \"Account Found Flow\"",
+        "step_7": "THEN I should see the Success Screen with my subscription details"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "The app doesn't ask for new account creation on mobiles and web",
+        "step_7": ""
+      },
+      "stepsCount": 7
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "My48Tb4bFJq81v",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-24791",
+      "folder": {
+        "id": "1134270",
+        "name": "Commerce"
+      },
+      "summary": "Validate creating a new d+ account with subscription (DTC/IAP)",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "Given I launch d+ app with active language as <language>\n\n||*language*||\n|English|\n|Canadian-French|\n\n",
+        "step_2": "And I select Subscribe Now CTA on welcome screen",
+        "step_3": "When I select any plan on plan picker screen",
+        "step_4": "And I verify following <elements> on create account screen localized as per selected language in step no. 1\n\n||*Elements*||*Platform*||\n|discovery+ visitor agreement legal text|Web, Mobile, CTV|\n|\"Agree and Continue\" CTA|Web, Mobile, CTV|\n|\"Visitor agreement and Privacy notice\" CTA|CTV|\n|\"Visitor agreement and Privacy notice\" hyperlink|Web, Mobile|\n|*Email Marketing Consent check box* - Users must be presented with a single, unchecked box for email marketing consent in the Create Account|Web, Mobile, CTV|\n\n",
+        "step_5": "And I select \"Agree and Continue\" CTA",
+        "step_6": "And I verify summary screen with plan details and legal text",
+        "step_7": "And I enter the payment details on payment screen and proceed with the purchase",
+        "step_8": "And I select \"start streaming\" CTA on purchase success screen"
+      },
+      "expectedResults": {
+        "step_1": "Then I should see welcome screen in that specific language",
+        "step_2": "",
+        "step_3": "Then I see create account screen",
+        "step_4": "Checkbox for Email Marketing Consent must come after the legal disclosure copy and before the call to action button\n\n*Note*: If an error occurs and the disclosure is not displayed, the user see an error message and be prevented from proceeding into the experience",
+        "step_5": "Then a record of their Terms of Use acceptance and Privacy Policy acknowledgement must be created",
+        "step_6": "",
+        "step_7": "Then a new account is created successfully and I land on purchase success screen",
+        "step_8": "Then I land on home screen of d+ app"
+      },
+      "stepsCount": 8
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "GN79SqEqiZ1ml4",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 2
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15876",
+      "folder": {
+        "id": "1134271",
+        "name": "Subscribe via IAP"
+      },
+      "summary": "Validate IAP Happy Path Purchase",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {
+        "id": 417119,
+        "name": "Done",
+        "color": "#14892c",
+        "isArchive": false
+      },
+      "stepDetails": {
+        "step_1": "GIVEN I have the BEAM App installed and I do not have a subscription",
+        "step_2": "WHEN I select a Subscribe CTA on the Welcome screen\n\nNote - Amazon is sign in only for every country it's available in, except for US, Brazil, Mexico, France, Spain, and Australia, where user can subscribe. So, User sees \"SUBSCRIBE NOW\" CTA on US, Brazil, Mexico, France, Spain, and Australia. User sees \"SIGN IN\" only on rest.",
+        "step_3": "",
+        "step_4": "AND I select a Plan",
+        "step_5": "AND I select 'Continue' button",
+        "step_6": "AND I am navigated to ID first auth screen \n\n||*Platform*||*Create account*||\n|Mobile / Web\nNote: Email and PWD flow|US, LATAM, EMEA, APAC\n[Web.png|https://warnermedia.sharepoint.com/:i:/r/sites/GQAOrg/Shared%20Documents/GQA%20DTC%20-%20Viewers/QMetry/FUSE/Test%20Case/IAPA/GQA-TC-15876/Web.png?csf=1&web=1&e=7y1GqI] , [mobile.png|https://warnermedia.sharepoint.com/:i:/r/sites/GQAOrg/Shared%20Documents/GQA%20DTC%20-%20Viewers/QMetry/FUSE/Test%20Case/IAPA/GQA-TC-15876/mobile.png?csf=1&web=1&e=FMBUdU]|\n|Mobile / Web\nNote: Mobile # flow|APAC \n[APAC_MobileNumberflow.png|https://warnermedia.sharepoint.com/:i:/r/sites/GQAOrg/Shared%20Documents/GQA%20DTC%20-%20Viewers/QMetry/FUSE/Test%20Case/IAPA/GQA-TC-15876/APAC_MobileNumberflow.png?csf=1&web=1&e=AIBiEh]\nAPAC W3 countries should not see sign up with mobile number option|\n|*CTV - All*|Use your Remote to reach Create account page on device  \n!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2025-06-16%2Bat%2B12.20.44%25E2%2580%25AFPM_1750090880008.png&token=lvobog35q5U36DAEaNP3tWMKN8kWoVf6a5qwrPKLCykYD8bWMLCVL7ZDWmDKfQKnRWVwKvS8354D6o9ptQ7p5m3A5psWR5O4lxLQi1wDMwQEgpSD5WZAPEEahy29nZw4axIqzYWg9137i4wMK1rv4Qu6qMo7EM2KFA868Gd9zn|width=200,height=183!\nNote: Fname and L name fields are swapped to screen 1 and Emai and Pwd fields are in Screen 2|\n|*CTV - Roku*|Roku pre-fill Create account screen|\n\n!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2025-06-16%2Bat%2B12.30.20%25E2%2580%25AFPM_1750091453943.png&token=xlymy83G5GIb95a81gxbUo53nJgoVkTRwOaonMvVu9pk4Aa1zWCxVLYlGblZtWzpYxbEzoTz1agWjoJ6Hwgr5J6O5rSOow2mM6l4spVxRVvKwoUyvdNV4qYlHopj66R6JQszv32o7bQRcWzny7mGWAu8E87bnnzoi9lYMk1dpQ|width=200,height=183!\n\n| |\n\n|*CTV - Roku ( EMEA)*|Account creation screen   ???11???  Note: Fname and L name fields are swapped to screen 1 and Emai and Pwd fields are in Screen 2\n!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2024-02-23%2Bat%2B5.38.38%25E2%2580%25AFPM_1739377845178.png&token=d62921VN3NhdL582AmGdsb3ADYObMgfkK4dnpDL8IdA14MpmJxha1v7EDpEZF9Yv2yMxYQUv9VbxJljLfmZyqDpdqyi1aWVlL9vdS29QQEO6Q9s5Da9aqVqbuv55m8Mkk2Fz3nmn3v58cn8AaOx9vOtvQMLzvL3yfnw1NYL29|width=200,height=183!|\n|*CTV - All regions*|Account creation using QRcode Email/PWD flow  \n!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2025-02-12%2Bat%2B11.32.02%25E2%2580%25AFAM_1739377950858.png&token=1RDLDnEdKdIdl4PAWbrdszgjPYqzRacPjbA86pvkF52wWVgNdLSWApE8ad8rcrb3NRLobptAbMNporVJcPYLyd6AyLC2jwrALRovuD2Oz5EG8lsqrmg1kgYvC2oDgmzNDwFZ4nQA9WpOu4QKoqKQRgsJOElPAnwWcEoaLEl7mb|width=200,height=183!\nAccount creation using QRcode mobile # flow   \n!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2025-02-12%2Bat%2B11.33.38%25E2%2580%25AFAM_1739378055693.png&token=lvobog35q5U36DAEaNP3tWMKN8kWoVf6a5qwrPKLCykYD8bWMLCVL7ZDWmDKfQKnRWVwKvS8354D6o9ptQ7p5m3A5psWR5O4JpyqTorMQ3zEKbcDG58AMKndfy6MPv64kWTqzYWg9kJnI4wMK1MwPGs6E9DK4gmdc7bp71Wmzn|width=200,height=183!\n, Account creation using Activation code Email/PWD flow   \n!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2025-02-12%2Bat%2B11.36.44%25E2%2580%25AFAM_1739378230052.png&token=D95j5Z6kwkCrAvQg1byrSPvprkmPLnHYGOWwxJdMs3OMb1DJkvuxAd1yKPyltj8Wd7Na8xUa6oDPqGdMFNRoA9jyAouxR7KvjdgrSPbxLGwp2ataqEVbYgGjCbMLzJl7VmCoW4lORZqdU137Pr73knC3lgvNmO2zHVkLZDoz26|width=200,height=183!\nAccount creation using Activation code mobile # flow  \n!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2025-02-12%2Bat%2B11.37.42%25E2%2580%25AFAM_1739378289462.png&token=yRpvp63NANIrQVyWR72rSpgnEAYp5ZunA2ygKGQRf2Nm6RLVqxtQNnk76R7KfJpoGPD3p5Izdg7oP3GnHaDdZqYAZdsNLRamr912IQ6q2vWbALTZ1rbJvMRlS1DlJ4Z5lETpaQdZxM2yc1Kq6LqKZaCkPObD8RnvfKNWjjbmyl|width=200,height=183!|\n|*CTV APAC- Mobile number Manual entry flow*|Note: User will enter country code and mobile number manually\n!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2025-02-12%2Bat%2B11.44.21%25E2%2580%25AFAM_1739378688139.png&token=wVvavr1KJKTPwDgWKZ8Pu3gzYba32qUrlVo9PdkOFp3kElO2bjUnoOg78E7Ni3jw16krjNfEMRw2gy8mF9KN4OLQ4NcNKmGagWjVIkP2pwqNg7s7LZPEpDEGcmOAb86GK2I3KZ6NPObptoy8qr8yYlfVKl89VYyJIm69OawZVK|width=200,height=183!|\n\n",
+        "step_7": "AND the ID first auth screen changes all references from Max to HBO Max",
+        "step_8": "AND the Create Account screen Disclaimers changes all instances of Max to HBO Max.",
+        "step_9": "AND (if I needed to create a new Account) I select the Create Account CTA after I filled all my credentials",
+        "step_10": "",
+        "step_11": "AND If I see <Arkose Type> Challenge and I perform <Action> to complete Arkose challenge\n |||_Arkose Type_||_Action_||\n ||| Tile Game |  Select the correct tile based on question asked|\n ||| Match Game |  Perform actions asked on the screen |\n ||| Audio Challenge |  Listen to the audio and enter answer in the filed|",
+        "step_12": "AND I select Subscribe CTA on Pre-purchase summary screen\n |||_Platform_||_Expected _||\n ||| Mobile(iOS, Android) | Native store payment screen |\n ||| CTV (Apple, Google, Amazon, Roku, Samsung) | Native store payment screen |\n ||| STB (Comcast, Cox) | Native store payment screen|",
+        "step_13": "AND I finish payment steps based on the native platform",
+        "step_14": "",
+        "step_15": "AND I should be able to click on Start Streaming button",
+        "step_16": "THEN I should land on Who's Watching Profile picker page"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "Roku / Apple TV / Android TV / Amazon Fire TV / Samsung TV / Comcast / Cox:\n No Continue CTA is displayed on the 'Choose Your Plan' screen. These platforms are directed to Create Your Account Screen by selecting a plan.",
+        "step_6": "",
+        "step_7": "Part of the HBO Max rebranding means changing all instances of Max to HBO Max. ",
+        "step_8": "Part of the HBO Max rebranding means changing all instances of Max to HBO Max. ",
+        "step_9": "",
+        "step_10": "",
+        "step_11": "Note:\n In production Arkose will trigger based on a score that Arkose generates\n In test env we can generate by passing the following user agent: discovery-interactive ( Dev can help)",
+        "step_12": "",
+        "step_13": "",
+        "step_14": "",
+        "step_15": "",
+        "step_16": ""
+      },
+      "stepsCount": 17
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "N6E3c393IkAl1z",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15877",
+      "folder": {
+        "id": "1134272",
+        "name": "Change Plan"
+      },
+      "summary": "Change Plan - Upgrade Plan",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {
+        "id": 417119,
+        "name": "Done",
+        "color": "#14892c",
+        "isArchive": false
+      },
+      "stepDetails": {
+        "step_1": "GIVEN I am an existing Subscriber signed into BEAM",
+        "step_2": "WHEN I select 'Change Plan' from the Profile > Subscription screen",
+        "step_3": "THEN I am displayed the 'Change Your Plan' screen which displays all Plans available for me to move to with the Current Plan displayed as 'Current Plan'",
+        "step_4": "WHEN I select a Plan which is not my Current Plan to Upgrade to and I select 'Continue'",
+        "step_5": "",
+        "step_6": "*AND* I am displayed the relevant Platform Billing flow to step through \n\n||*Web*|Web screens| |\n||*Mobile Web*|Mobile Web screens| |\n||*iOS Mobile*|Apple IAP| |\n||*tvOS*|Apple IAP| |\n||*Andoid Mobile*|Google IAP| |\n||*Andoid TV*|Google IAP| |\n||*Roku*|Roku Pay| |\n||*Fire TV*|Amazon| |\n||*Fire Tablet*|Amazon| |\n||*Samsung*|Samsung IAP| |\n||*Vizio*|Web screens| |\n||*XBox*|Web screens| |\n||*Playstation*|Web screens| |\n||*LG*|Web screens|| ||\n\n",
+        "step_7": ""
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "*Note*: Refer to Precondition section for Upgrade Plan",
+        "step_5": "",
+        "step_6": "*Removing CDEV Platform because Except Samsung rest of all the platforms depend on webplatform and for Samsung downgrade and upgrade not supported.https://wbdstreaming.atlassian.net/browse/COM-149*",
+        "step_7": ""
+      },
+      "stepsCount": 7
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "9DG5SjajUDGgYA",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15878",
+      "folder": {
+        "id": "1134272",
+        "name": "Change Plan"
+      },
+      "summary": "Change Plan - Downgrade Plan",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {
+        "id": 417119,
+        "name": "Done",
+        "color": "#14892c",
+        "isArchive": false
+      },
+      "stepDetails": {
+        "step_1": "GIVEN I am an existing Subscriber signed into BEAM",
+        "step_2": "WHEN I select 'Change Plan' from the Profile > Subscription screen",
+        "step_3": "THEN I am displayed the 'Change Your Plan' screen which displays all Plans available for me to move to with the Current Plan displayed as 'Current Plan'",
+        "step_4": "WHEN I select a Plan which is not my Current Plan to Downgrade to and I select 'Continue'",
+        "step_5": "",
+        "step_6": "AND I am displayed the relevant Platform Billing flow to step through \n |||||||\n |||Web|Web screens|  |\n |||Mobile Web|Mobile Web screens|  |\n |||iOS Mobile|Apple IAP|  |\n |||tvOS|Apple IAP|  |\n |||Android Mobile|Google IAP|  |\n |||Android TV|Google IAP|  |\n |||Roku|Roku Pay|  |\n |||Fire TV|Amazon|  |\n |||Fire Tablet|Amazon|  |\n |||Samsung|Samsung IAP|  |\n |||Vizio|Web screens|  |\n |||XBox|Web screens|  |\n |||Playstation|Web screens|  |\n |||LG|Web screens|",
+        "step_7": ""
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "*Note: Refer to Precondition section for Downgrade Plan *",
+        "step_5": "",
+        "step_6": "*Removing CDEV Platform because Except Samsung rest of all the platforms depend on webplatform and for Samsung downgrade and upgrade not supported.https://wbdstreaming.atlassian.net/browse/COM-149*",
+        "step_7": ""
+      },
+      "stepsCount": 7
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "VxKqubDbFyPQdm",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15881",
+      "folder": {
+        "id": "1134273",
+        "name": "Web Purchase Flow"
+      },
+      "summary": "DTC Change Plan - Downgrade Plan",
+      "priority": {
+        "id": 219961,
+        "name": "P1",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.38 PM_AOUtefqB5Y.png",
+        "isArchive": false
+      },
+      "status": {
+        "id": 417119,
+        "name": "Done",
+        "color": "#14892c",
+        "isArchive": false
+      },
+      "stepDetails": {
+        "step_1": "GIVEN I am an existing Subscriber signed into BEAM",
+        "step_2": "WHEN I select 'Change Plan' from the Profile > Subscription screen",
+        "step_3": "THEN I am displayed the 'Change Your Plan' screen which displays all Plans available for me to move to with the Current Plan displayed as 'Current Plan'",
+        "step_4": "WHEN I select a Plan which is not my Current Plan to Downgrade to and I select 'Continue'",
+        "step_5": "THEN I am displayed a 'Confirm Plan Change' screen where I can select 'Confirm Change' CTA or 'Cancel' (which shows the Subscription screen)",
+        "step_6": "",
+        "step_7": "AND I can select the 'Confirm Change' CTA which processes the change request and displays a spinner",
+        "step_8": "",
+        "step_9": "AND 'Change Plan' cannot be selected on the Subscription page",
+        "step_10": "AND the 'Upcoming Payments' section is displayed with details of the new plans payment required"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "",
+        "step_7": "",
+        "step_8": "",
+        "step_9": "",
+        "step_10": ""
+      },
+      "stepsCount": 10
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "zYVqf9v9hWld33",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15880",
+      "folder": {
+        "id": "1134273",
+        "name": "Web Purchase Flow"
+      },
+      "summary": "DTC Change Plan - Upgrade Plan",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {
+        "id": 417119,
+        "name": "Done",
+        "color": "#14892c",
+        "isArchive": false
+      },
+      "stepDetails": {
+        "step_1": "GIVEN I am an existing Subscriber signed into BEAM",
+        "step_2": "WHEN I select 'Change Plan' from the Profile > Subscription screen",
+        "step_3": "THEN I am displayed the 'Change Your Plan' screen which displays all Plans available for me to move to with the Current Plan displayed as 'Current Plan'",
+        "step_4": "WHEN I select a Plan which is not my Current Plan to Upgrade to and I select 'Continue'",
+        "step_5": "THEN I am displayed a 'Confirm Plan Change' screen where I can select 'Confirm Change' CTA or 'Cancel' (which shows the Subscription screen)",
+        "step_6": "",
+        "step_7": "AND I can select the 'Confirm Change' CTA which processes the change request and displays a spinner",
+        "step_8": ""
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "",
+        "step_7": "",
+        "step_8": ""
+      },
+      "stepsCount": 8
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 3,
+      "id": "My48Tb4bFJVDZK",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15879",
+      "folder": {
+        "id": "1134273",
+        "name": "Web Purchase Flow"
+      },
+      "summary": "DTC New User Purchase Flow - All Entry Points",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {
+        "id": 417119,
+        "name": "Done",
+        "color": "#14892c",
+        "isArchive": false
+      },
+      "stepDetails": {
+        "step_1": "GIVEN I launch HBO Max as new User.",
+        "step_2": "WHEN I initiate a DTC purchase from [Location]\n\n||*Platform*||*Location*||\n|Web|Central CTA Button|\n|Web|Top Banner, Right Edge|\n|Mobile (& Apple Vision pro)|\"Subscribe Now\" with share icon CTA - This will open up a Browser Session on the device.|\n|STB/CDEV/Bounty/AndroidTV|\"Subscribe Now\"/\"Get Started\" CTA, then scanning QR Code|\n|STB/CDEV/Bounty/AndroidTV|\"Subscribe Now\"/\"Get Started\" CTA, then using numeric code at listed URL.|\n\n_Note:_ These locations are not absolute. If they change without notice, please inform the Feature Champion, and please make sure to test all entry points into DTC Buy Flow.",
+        "step_3": "THEN I am displayed a Web screen named 'Choose Your Plan' displaying Plans I can purchase\n???0???",
+        "step_4": "AND I  select a Plan and select 'Continue'",
+        "step_5": "AND I land on Get Started page with email field",
+        "step_6": "AND the ID first auth screen changes all references from Max to HBO Max",
+        "step_7": "AND I enter the email address ",
+        "step_8": "AND depending on the <condition>, the following <action> occurs ",
+        "step_9": "",
+        "step_10": "AND I confirm the following payment methods are available with their own accordion sections*\n\n||*_Region_*||*_Payment Types available_*||\n||*USA*|Credit or Debit card, Paypal, Apple Pay, Google Pay|\n||*Brazil*|Credit Card, Debit Card (must be separate selections), Nupay|\n||*All other LATAM countries*|Credit or Debit card *(no PayPal, no Accordion selection, full form is available upon load|\n||*Netherlands*|iDEAL, Credit or Debit Card, Paypal, Apple Pay|\n||*Belgium*|Bancontact Card, Credit or Debit Card, Paypal, Apple Pay|\n||*Turkey*|Credit or Debit card, Apple Pay|\n||*Austria, Germany*|Klarna, Credit or Debit card, Paypal, Apple Pay|\n||*All other EMEA countries*|Credit or Debit card, Paypal, Apple Pay|\n||*Australia*|Credit or Debit card, Paypal, Apple Pay|\n||*All APAC Countries*|Credit or Debit card, Apple Pay|\n\n",
+        "step_11": "AND, depending on what country I'm signing up from, I see a specific list of supported credit and debit cards.\n\n||*_Region_*||*_Supported Credit/Debit cards_*||\n||*USA*|American Express, Discover, JCB, Mastercard, Visa|\n||*LATAM*|Consult the LATAM List: [https://wbdstreaming.atlassian.net/l/cp/4Ri1B6Qy|https://wbdstreaming.atlassian.net/l/cp/4Ri1B6Qy]|\n||*Andorra and Moldova*\n*Ireland*|Mastercard, Visa|\n||*France*|American Express, Mastercard, Visa, Carte Bancaire|\n||*Turkey*|American Express, Mastercard, Visa, Troy|\n||*Tajikistan*|American Express, Mastercard, Visa, UnionPay|\n||*All other EMEA countries*|American Express, Mastercard, Visa|\n||*All APAC countries*|American Express, Mastercard, Visa, JCB, UnionPay|\n\n",
+        "step_12": "",
+        "step_13": "WHEN I select a payment method from the 'Choose How to Pay' screen",
+        "step_14": "AND I select pay now CTA after entering payment information successfully",
+        "step_15": "",
+        "step_16": "Web: THEN I select \"Start Streaming\" button which directs me to Who's Watching page on web\n\nMobile (& Apple Vision Pro): THEN I select \"Start Streaming\" button which deep links back to the Native app, and the Native App logs in to the newly created account, and opens up the Who's Watching Page.\n\nSTB/CDEV/Bounty: THEN the test device automatically signs into the newly created account, and open up the Who's Watching Page."
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "",
+        "step_7": "",
+        "step_8": "",
+        "step_9": "",
+        "step_10": "Special Notes:\nThe Netherlands 🇳🇱 : *iDEAL* must appear first (at the top) in the Accordion.\n\nBelgium 🇧🇪 : *Bancontact* must appear first (at the top) in the Accordion.\n\nFrance 🇫🇷 : Carte Banciere will use the Credit or Debit Card section of the Accordion.\n\nTurkey 🇹🇷 : The user will always be redirect to iyzico as part of the flow. Turkey experience: [Figma|https://www.figma.com/design/a9KEBfySu9FxvHXy3qmVIa/MAX-%5BEMEA%5D-Subscription-Flows---True-Add-Ons?node-id=10474-208240&t=J9jj0DLMpxkucv9s-4]\n\nApple Pay 🍎 : Apple Pay is only available on supported browsers. See [GQA-TC-67567|https://wbdstreaming.atlassian.net/plugins/servlet/ac/com.infostretch.QmetryTestManager/qtm4j-test-management?project.key=GQA&project.id=10081#!/TestCaseDetail/gK6rTo8osLwq7Q/1?projectId=10081]\n\nGoogle Pay 🇬 : Google Pay is only available on supported browsers. See [COM-39436|https://wbdstreaming.atlassian.net/browse/COM-39436] \n\nBrazil 🇧🇷 : *Nupay* should be the 3rd position on the list, below Credit Card, and Debit Card. See [COM-44557|https://wbdstreaming.atlassian.net/browse/COM-44557]",
+        "step_11": "LATAM List: https://wbdstreaming.atlassian.net/l/cp/4Ri1B6Qy\n EMEA List: [COM-10139|https://wbdstreaming.atlassian.net/browse/COM-10139]",
+        "step_12": "",
+        "step_13": "",
+        "step_14": "",
+        "step_15": "",
+        "step_16": ""
+      },
+      "stepsCount": 16
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "l8EMS8p8i2n8dA",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15882",
+      "folder": {
+        "id": "1134274",
+        "name": "Content Detail Page"
+      },
+      "summary": "Authenticated user with child profile is shown More Like this Content that is child rating appropriate",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "*GIVEN* I am an authenticated user with a Kid or Family enabled",
+        "step_2": "*AND* I have a specific parental control <rating> set",
+        "step_3": "*WHEN* I navigate to the <assetType>",
+        "step_4": "*AND* I land on the More Like This",
+        "step_5": "*THEN* the content displayed should be within the set parental control rating"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "RpygSZaZsbjNgw",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15883",
+      "folder": {
+        "id": "1134275",
+        "name": "Movie Detail Page"
+      },
+      "summary": "Authenticated User:  Validating movie detail page via Movie tiles",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I launch the Beam app as an authenticated user with no viewing history",
+        "step_2": "WHEN I select the < item > from < page > page",
+        "step_3": "AND I Select 'Watch Now' CTA on the movie details page",
+        "step_4": "THEN the video playback starts"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": ""
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "8MKJILELs8MzoE",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 2
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15884",
+      "folder": {
+        "id": "1134276",
+        "name": "Age Rating & Content Descriptors"
+      },
+      "summary": "Authenticated User - Verify Age Rating & Content Descriptors",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "WHEN I Navigate to <VideoContent> on any page ",
+        "step_3": "THEN I Should see Age Ratings & Content Descriptors[Ratings & Advisories Overlay] for respective regions as applicable.\n Refer to Test Data Section."
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": ""
+      },
+      "stepsCount": 3
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "x1M2SdEdFljJv9",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15889",
+      "folder": {
+        "id": "1134277",
+        "name": "Watch and Playback experience"
+      },
+      "summary": "Verify Live Sport/Entertainment  playable across all subscription  tiers",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am unauthenticated user.",
+        "step_2": "WHEN I play Live Sports / Entertainment content with any <subscription tier>\n\n||*_subscription tier_*||\n||*With Ads (monthly / yearly)*||\n||*With Ads + Sports (monthly / yearly)*||\n||*Ad-Free (monthly / yearly)*||\n||*Ad-Free + Sports (monthly/yearly)*||\n||*ultimate Ad-free (monthly / yearly)*||\n||*Ultimate Ad-free + Sports (monthly /yearly)*||\n\n",
+        "step_3": "THEN playback should happen from the live point irrespective of the program status"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "Note : Live Sports/Entertainment included in all Subscription tier for 3 months . No addition subscription ( sports add-on ) required",
+        "step_3": ""
+      },
+      "stepsCount": 3
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "2ZmqFqVqi7Nx3K",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15888",
+      "folder": {
+        "id": "1134277",
+        "name": "Watch and Playback experience"
+      },
+      "summary": "Verify Info Panel CTA action for different types of Live assets",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "Given I'm a Max customer",
+        "step_2": "AND I am in the Content Detail page of different type of Live <Assets>",
+        "step_3": "WHEN I click on <CTA's> button of any <Assets> in details page Button",
+        "step_4": "THEN I see different <Actions>"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": ""
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 3,
+      "id": "7ar6tzWzHRkqV7",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15887",
+      "folder": {
+        "id": "1134277",
+        "name": "Watch and Playback experience"
+      },
+      "summary": "Verify Live Linear playable across all subscription  tiers",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am unauthenticated user.",
+        "step_2": "WHEN I play Live Linear channel with any <subscription tier>\n |||_subscription tier_||\n |||With Ads (monthly)|\n |||With Ads + Sports (monthly)|\n |||Ad-Free (monthly)|\n |||Ad-Free + Sports (monthly)|\n |||ultimate Ad-free (monthly)|\n |||Ultimate Ad-free + Sports (monthly)|",
+        "step_3": "THEN playback should happen from the live point irrespective of the program status"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": ""
+      },
+      "stepsCount": 3
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 4,
+      "id": "gK6rTo8osQy6ZN",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15886",
+      "folder": {
+        "id": "1134277",
+        "name": "Watch and Playback experience"
+      },
+      "summary": "Verify Live Linear playback - Immersive and Inline Hero Components",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an Authenticated user",
+        "step_2": "AND I located Immersive Hero and Inline Hero component",
+        "step_3": "WHEN I click on <CTA's> of different <Pages>\n\n||*_Pages_*||*_<CTA's> For US _*||*_<CTA'S> For EMEA _*||\n||*Immersive Hero component*|Watch Live|Watch Channel|\n||*Inline Hero component*|Watch Live|Watch Channel|\n\n",
+        "step_4": "THEN playback should happen from the live point irrespective of the program status"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "For US   ???0???   \n For EMEA  ???1???  &   ???2???",
+        "step_3": "// For LATAM, its not yet available\n\nEMEA - [Watch Channel is not present on Immersive Hero] [[https://www.figma.com/design/VP8cmbYTDg5iy4CqSoDcKZ/|https://www.figma.com/design/VP8cmbYTDg5iy4CqSoDcKZ/][Spec]-Immersive-%26-Inline-Hero-(Info-Block-Short)?node-id=701-208394&t=R5Y2Yuj94PqNvwqh-0|[https://www.figma.com/design/VP8cmbYTDg5iy4CqSoDcKZ/%5BSpec%5D-Immersive-%26-Inline-Hero-(Info-Block-Short)?node-id=701-208394&t=R5Y2Yuj94PqNvwqh-0|https://www.figma.com/design/VP8cmbYTDg5iy4CqSoDcKZ/%5BSpec%5D-Immersive-%26-Inline-Hero-(Info-Block-Short)?node-id=701-208394&t=R5Y2Yuj94PqNvwqh-0]]\n\n!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Untitled_1742853217598.png&token=1RDLDnEdKdIdl4PAWbrdszgjPYqzRacPjbA86pvkF52wWVgNdLSWApE8ad8rcrb3NRLojlHDOdAvgzdNf8WLDnw2Enu2jOqwrWDDImava5PGzA|width=200,height=183!\n\n",
+        "step_4": ""
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 5,
+      "id": "3bvwSj1jUzZQRY",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15885",
+      "folder": {
+        "id": "1134277",
+        "name": "Watch and Playback experience"
+      },
+      "summary": "Verify user can enter PiP mode",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "And I start playback from an asset details page",
+        "step_3": "When I background the app",
+        "step_4": "Then I should see the playback continues in PIP (picture in picture) mode"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": ""
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "wo97CN3NHGJbV2",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15891",
+      "folder": {
+        "id": "1134278",
+        "name": "Core playback"
+      },
+      "summary": "Authenticated User can play  content",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "WHEN I select the content of <AssetType>",
+        "step_3": "THEN I see the playback is initiated",
+        "step_4": "AND I am able to Pause / Resume / FFD / RWD"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "Trailers can't be automated because of very short length , When I do FFD/RWD it exceeds the video length"
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "q7p8uJ4JI2drD1",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15890",
+      "folder": {
+        "id": "1134278",
+        "name": "Core playback"
+      },
+      "summary": "Authenticated User - Video Playback in Fullscreen mode",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am fully entitled  user",
+        "step_2": "AND I am playing a minimized video",
+        "step_3": "WHEN I switch the player screen to Fullscreen mode(if applicable)",
+        "step_4": "THEN I see the player screen expand to fit the screen and continue playback"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": ""
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "QovZCajasa6NvA",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15893",
+      "folder": {
+        "id": "1134279",
+        "name": "Ads Playback"
+      },
+      "summary": "Authenticated User - Validate Hidden Progress Bar, Pause/resume, Scrub Backward and Forward during Ad Playback",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated with Adlite account",
+        "step_2": "WHEN I play a video with ads",
+        "step_3": "AND I reach Ad-pod / Ad Cue",
+        "step_4": "Then I see Ad streaming with following elements\n Play/Pause button\n Ad counter\n Back button (backs out of player)\n FullScreen Button (web only)\n Caption controls\n Sound level controls",
+        "step_5": "AND I don't see any Progress bar & other player control"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "kZ49F6m6fDwndp",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15892",
+      "folder": {
+        "id": "1134279",
+        "name": "Ads Playback"
+      },
+      "summary": "Authenticated User - Verify Ad Pods & Ad Counter",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated with Adlite account",
+        "step_2": "WHEN I play a video with ads",
+        "step_3": "AND I observe Ad Pods on the Progress bar",
+        "step_4": "THEN I Observe <Variation>,\n |||_Variation_||\n ||| Timeline indicating where ad breaks will play. |\n ||| For unwatched ads, observe breaks marked with gap in the player timeline.|\n ||| When an ad is playing that ad break, should be marked in white|\n ||| Watched ads should be marked in white|",
+        "step_5": "AND I observe ad playback when the video reaches the Ad Pods/ Ad Cue",
+        "step_6": "AND I don't see CC",
+        "step_7": "And I see the expected <Badge> , <Count>, and <Timer> based on <Region> experience on all platforms"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "[https://wbdstreaming.atlassian.net/browse/GCX-55870|https://wbdstreaming.atlassian.net/browse/GCX-55870]",
+        "step_5": "",
+        "step_6": "",
+        "step_7": ""
+      },
+      "stepsCount": 7
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "jDANSj3jU3aDjn",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15895",
+      "folder": {
+        "id": "1134280",
+        "name": "BEAM Pre- and Post-Roll Playback"
+      },
+      "summary": "Adult mid-roll Ads",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {
+        "id": 417119,
+        "name": "Done",
+        "color": "#14892c",
+        "isArchive": false
+      },
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated with Adlite account",
+        "step_2": "WHEN I select an Adult profile",
+        "step_3": "AND I start to Play an asset which has Midroll  \n (As of now Asset 42 has this setup)",
+        "step_4": "THEN I should see  mid-roll Ads during the playback in an ad break  <language> based on <Region>",
+        "step_5": "AND the transition between the content, the Ad and the main content should be without any \n disruption like buffering, freezing or \"blip\"-ing."
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "W9GwTA5Ain8Rv3",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15894",
+      "folder": {
+        "id": "1134280",
+        "name": "BEAM Pre- and Post-Roll Playback"
+      },
+      "summary": "Adult pre-roll bumpers",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an Authenticated user with an Adlite account",
+        "step_2": "WHEN I select an Adult profile",
+        "step_3": "AND I start to Play an asset which has Preroll ad",
+        "step_4": "THEN I should see a 8sec long pre-roll bumper before the 15sec video ad plays in <language> based on <Region>",
+        "step_5": "AND the transition between the bumper, preroll ad and the main content should be without any disruption like buffering, freezing or \"blip\"-ing."
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "P5mYUEqEs4Gg5y",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15899",
+      "folder": {
+        "id": "1134281",
+        "name": "VOD Timeline, Playback Controls & Transport Controls"
+      },
+      "summary": "Verify user can use scrubbing to FF/Back video",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "Given I open Beam app as an authenticated user",
+        "step_2": "And I start playback from an asset detail page",
+        "step_3": "When I use <player controls> on <device type>\n\n||*_device type_*||*_player controls_*||\n||Mobile/Desktop|Drag the playhead|\n||CTV|press/hold the left/right d-pad|\n\n",
+        "step_4": "And I perform <action> on <device type>\n\n||*_device type_*||*_action_*||\n||Mobile/Desktop|release playhead|\n||CTV|Pressing OK/Select|\n\n",
+        "step_5": "Then playback session will resume again from the new position in the Seek bar (see clarification for step 5 above)"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "If the user holds the dpad right or left button for 2 sec, the controls will enter the FFW/RWD mode and we will trigger the FFW/RWD action with speed = 1x (15 sec)\n After that,\n Tapping right jumps you up a speed\n Tapping left jumps you down a speed\n Tapping right once you're already at #4 does nothing\n Tapping left from a 1x speed it would go to 0x = Play i.e normal speed\n Pressing Back during FFW/RWD action, then the current playhead position will be canceled and we will take the user back to the starting point for the FFW/RWD action. (i.e. Cancels the FFW/RWD seek)",
+        "step_4": "CTV Pressing OK/Select, then the current playhead position will be accepted and the FFW/RWD action will stop.",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "L4ARFwvwsaxKL3",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15898",
+      "folder": {
+        "id": "1134281",
+        "name": "VOD Timeline, Playback Controls & Transport Controls"
+      },
+      "summary": "Verify timeline indicators are displayed",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "Given I open Beam app as an authenticated user",
+        "step_2": "And I have started playback from Home page",
+        "step_3": "When I do <action>\n |||_action _||\n ||| Invoke player controls |\n ||| FWD/RWD|\n ||| Move focus to MLP button|",
+        "step_4": "Then I should see <focus location>  and <timeline elements>\n\n||_action _||*_ focus location _*||*_timeline elements_*||\n||Invoke player controls|Scrubber is in focus|time remaining|\n||FWD/RWD|Scrubber is in focus|Current time , trickplay with speed ramp and time remaining|\n||Move focus to MLP button|MLP is in focus|time remaining|\n\n"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": ""
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 3,
+      "id": "dxgyuqVqid4Yqg",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15897",
+      "folder": {
+        "id": "1134281",
+        "name": "VOD Timeline, Playback Controls & Transport Controls"
+      },
+      "summary": "Verify that user can pause any content",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "And I started playback of any content type",
+        "step_3": "When use <controls>\n\n||*_Controls_*||\n||*On-screen controls*||\n||*Space Bar*||\n||*Dedicated Play/Pause buttons*||\n||*select button on D-pad remotes*||\n\n",
+        "step_4": "Then I should see player chrome appears on the screen",
+        "step_5": "And video is paused on next press",
+        "step_6": "And video is resumed when <controls> are used again"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": ""
+      },
+      "stepsCount": 6
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "oZvlFjNjU7LQ2x",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15901",
+      "folder": {
+        "id": "1134282",
+        "name": "Audio and text menu"
+      },
+      "summary": "Verify cold start audio and text menu settings for kids profile",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "And I select kids profile",
+        "step_3": "And CC settings on device set to <DeviceCCSettings>\n\n||_DeviceCCSettings_||\n||ON||\n||OFF||\n\n",
+        "step_4": "When I start playback",
+        "step_5": "And select MLP button",
+        "step_6": "Then I should see <Audio> and <Text> defaults to:\n |||_DeviceCCSettings_||_Audio_||_Text_||\n ||| ON |  English | English|\n ||| OFF|  English |OFF|"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": ""
+      },
+      "stepsCount": 6
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "DPYKfqLqi3xkGw",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15900",
+      "folder": {
+        "id": "1134282",
+        "name": "Audio and text menu"
+      },
+      "summary": "Verify cold start audio and text menu settings for adult profile with device CC settings set to ON",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "AND I have selected an adult user profile",
+        "step_3": "And device CC settings set to  ON",
+        "step_4": "When I started playback",
+        "step_5": "AND I select MPL button",
+        "step_6": "Then I should see Audio is set to <AudioSettings> and text <CCSettings>\n\n||*_AudioSettings_*||*_CCSettings_*||\n||*Original language*|English CC|\n\n"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": ""
+      },
+      "stepsCount": 6
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "Aw8pS5M5Uo6O3v",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 2
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15906",
+      "folder": {
+        "id": "1134284",
+        "name": "Ratings & Advisories Overlay"
+      },
+      "summary": "R&A should display during intro",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "When I start playback of an asset that starts with  intro",
+        "step_3": "Then I should see the Rating & Advisory overlay"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": ""
+      },
+      "stepsCount": 3
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "5ypQTZbZsmZJWL",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 2
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15905",
+      "folder": {
+        "id": "1134284",
+        "name": "Ratings & Advisories Overlay"
+      },
+      "summary": "Rating and Advisories do not display over pre-roll",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "When I start playback of an asset that starts with <pre-roll>",
+        "step_3": "Then I should not see rating & advisory be displayed during <pre-roll>",
+        "step_4": "And overlay should display at the start of the \"main\" video asset"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": ""
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 3,
+      "id": "J5J1UA3AinrW2n",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 2
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15904",
+      "folder": {
+        "id": "1134284",
+        "name": "Ratings & Advisories Overlay"
+      },
+      "summary": "Verify R&A is <displayed> for <content type>",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "When I start playback on <content type>\n\n||_content type_||\n||Movies||\n||Live||\n||Episodes||\n||Trailers||\n||Extra||\n||Continue watching||\n||downloads||\n\n",
+        "step_3": "Then I should see Rating and Advisories is <displayed> if available in the CMS\n\n||*_content type _*||*_ displayed_*||\n||*Movies*|displayed|\n||*Live*|displayed*|\n||*Episodes*|displayed|\n||*Trailers*|displayed|\n||*Extra*|displayed|\n||*Continue watching*|displayed|\n||*downloads*|displayed|\n\n"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "* Will not display for LIVE  if the content is Sports or News. \n* for live linear channels it won't display advisories yet ratings can be displayed beside time left and below the title of the asset. \n\n"
+      },
+      "stepsCount": 3
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "4vykulzlTAVYDp",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15907",
+      "folder": {
+        "id": "1134285",
+        "name": "PIP"
+      },
+      "summary": "Verify PiP player controls",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "And start playback from an asset details page",
+        "step_3": "And I background the app to transition to PiP mode",
+        "step_4": "When I select PiP player <button>\n |||_button_||\n ||| Play/Pause |\n ||| FF/RW 10s  |\n ||| X |\n ||| back to fullscreen button|",
+        "step_5": "Then I should see <result>\n\n||_button _||*_ result_*||\n||Play/Pause|pause/resume playback|\n||FF/RW 10s|fast forward /rewind for 10 seconds|\n||X|close PiP player|\n||back to fullscreen button|restore the previous screen size for the application and player|\n\n"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "a1baSRPRSWL4nK",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15909",
+      "folder": {
+        "id": "1134286",
+        "name": "Offline Downloads Page"
+      },
+      "summary": "Unauthenticated Offline user is not prompted to visit the Downloads Page",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I turn off wifi/internet connection",
+        "step_2": "AND I launch the app as an unauthenticated user",
+        "step_3": "WHEN I receive the offline message",
+        "step_4": "THEN I do not see an option to visit download page"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": ""
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "EwZGSMWMhyKj5m",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15908",
+      "folder": {
+        "id": "1134286",
+        "name": "Offline Downloads Page"
+      },
+      "summary": "Offline user is able to navigate and edit the Downloads",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "Given I've installed D+ app in my mobile/tablet device",
+        "step_2": "And I've signed in to the app using Adfree/Premium account",
+        "step_3": "I have downloaded some Show's episodes on my device",
+        "step_4": "And I enter the \"Downloads Page\" ",
+        "step_5": "I click on the 'Show' tile of which episodes I've downloaded",
+        "step_6": "THEN I click 'Edit' CTA in the series level page",
+        "step_7": "Click the 'Remove' icon in the episode tile",
+        "step_8": "And click the 'Done' CTA after deleting the episodes you want"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "Clicking on the 'Show' tile will take me to the series level page",
+        "step_6": "* Clicking on the 'Edit' CTA will display 'Remove' icon on every downloaded episode\n* And the 'Edit' CTA will change to 'Done' CTA\n\n",
+        "step_7": "* App will display delete confirmation dialogue \n* App will delete the episode from the downloads if you press 'Yes'\n\n",
+        "step_8": "The 'Done' CTA will change the 'Edit' CTA"
+      },
+      "stepsCount": 8
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "yYzxf4J4T4wAlE",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15912",
+      "folder": {
+        "id": "1134287",
+        "name": "Downloads page access and view"
+      },
+      "summary": "User of a Kid's profile with downloads can not see downloads of other profiles",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "Given I am BEAM user who has access to the Offline Downloads feature",
+        "step_2": "And I sign in to the app (with an ad-free credential)",
+        "step_3": "AND I have profiles of <ProfileType>",
+        "step_4": "AND I have Downloads on all profiles",
+        "step_5": "WHEN I switch to <Kid1> profile",
+        "step_6": "AND I open Downloads page",
+        "step_7": "THEN I only see the assets downloaded by <Kid1> profile"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "",
+        "step_7": ""
+      },
+      "stepsCount": 7
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "vvNguoWoszjy7p",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15911",
+      "folder": {
+        "id": "1134287",
+        "name": "Downloads page access and view"
+      },
+      "summary": "Authenticated adult profile with no downloads can see downloads of other profiles",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "Given I am BEAM user who has access to the Offline Downloads feature",
+        "step_2": "And I sign in to the app (with an ad-free credential)",
+        "step_3": "AND I have profiles of <ProfileType>",
+        "step_4": "AND <Adult1> profile has no downloads while the other ones have downloads",
+        "step_5": "AND I open the <Adult1> profile",
+        "step_6": "WHEN I navigate to Downloads page",
+        "step_7": "THEN I see Downloads page populated with the downloads of other profiles"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "",
+        "step_7": ""
+      },
+      "stepsCount": 7
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 3,
+      "id": "mZazFxdxSP63Z7",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15910",
+      "folder": {
+        "id": "1134287",
+        "name": "Downloads page access and view"
+      },
+      "summary": "Unauthorized user can not access the Downloads Page",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I launch the Beam app as an unauthorized user",
+        "step_2": "WHEN I check main navigation",
+        "step_3": "THEN I do not see a download icon available"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": ""
+      },
+      "stepsCount": 3
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "p81RSAWAildbxD",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15913",
+      "folder": {
+        "id": "1134288",
+        "name": "Download Business Rules"
+      },
+      "summary": "Verify Download functionality will be suppress for Ad-Lite users",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "Given I am BEAM user with Ad-Lite access",
+        "step_2": "When I launch BEAM app while online",
+        "step_3": "Then I should not see Downloads button on  navigation panel",
+        "step_4": "And I should not see Downloads icon on the asset details page",
+        "step_5": "And I should not see Download settings options on Video Options tab"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "r7n3u9N9hJ8myp",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15915",
+      "folder": {
+        "id": "1134289",
+        "name": "Downloads Playback"
+      },
+      "summary": "Offline user is able to watch the downloaded content",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "Given I am BEAM user who has access to the Offline Downloads feature",
+        "step_2": "And I sign in to the app (with an ad-free credential)",
+        "step_3": "And I don't have wifi/internet connection",
+        "step_4": "AND I have downloads on my device",
+        "step_5": "When I select an asset to launch a player",
+        "step_6": "Then selected asset begins to play"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": ""
+      },
+      "stepsCount": 6
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "ndmVcWkWi1Gb8R",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15914",
+      "folder": {
+        "id": "1134289",
+        "name": "Downloads Playback"
+      },
+      "summary": "Online user is able to watch downloaded content",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "Given I have an active internet connection",
+        "step_2": "And I've launched BEAM app with an ad-free credentials",
+        "step_3": "And I navigate to any asset detail page",
+        "step_4": "And I see that I have at least one Episode downloaded from the selected show indicated by the 'download complete' icon",
+        "step_5": "When I select the Play download option",
+        "step_6": "Then selected asset begins to play"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": ""
+      },
+      "stepsCount": 6
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "Kk5lC868iGdDMn",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15916",
+      "folder": {
+        "id": "1134290",
+        "name": "Downloading an Asset"
+      },
+      "summary": "User Can Download Content From the Asset Details Page if not Blacklisted",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am BEAM user who has access to the Offline Downloads feature",
+        "step_2": "And I sign in to the app as <users> with <rights>\n |||_users _||_ rights_||\n ||| Adlite |no download rights|\n ||| Adfree | 30 downloads limit|\n ||| Ultimate |100 downloads limit|",
+        "step_3": "When I navigate to a non-blacklisted <AssetDetailsPage>\n\n\n\n\n||<AssetDetailsPage>||<content>||\n|Movies|Movie title|\n|Series|Episodes within the series|\n|Episode|Episode denoted in episode pdp|\n|Extras| |\n\n",
+        "step_4": "And I download the <content>",
+        "step_5": "Then the <content> should be downloaded"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "N6E3c393IkAlvz",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15918",
+      "folder": {
+        "id": "1134291",
+        "name": "Airplay"
+      },
+      "summary": "Validate Airplay for VOD content from player and reverting back stream",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "When I play any VOD Content on my Mobile devices And there is Apple TV casting device in same network",
+        "step_3": "THEN AirPlay icon will be presented (not greyed out)",
+        "step_4": "AND I tap on AirPlay icon And I see Cast dialog screen",
+        "step_5": "THEN I see video playback transitioning to the connected device on selecting the casting device name",
+        "step_6": "And I have a smooth and error free AirPlay experience.",
+        "step_7": "THEN I close the Airplay casting session",
+        "step_8": "THEN video playback stops on the Apple TV receiver player and playback stream is reverted back to the iOS player for the user to be able to resume playback."
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "",
+        "step_7": "",
+        "step_8": ""
+      },
+      "stepsCount": 8
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "9DG5SjajUDGg3A",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15919",
+      "folder": {
+        "id": "1134292",
+        "name": "Member Feed"
+      },
+      "summary": "Notification icon does not appear for a kid profile user",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "AND I have selected an adult user profile",
+        "step_3": "AND The adult profile has received a notification",
+        "step_4": "WHEN I switch to a kid profile",
+        "step_5": "AND I navigate to the home screen",
+        "step_6": "THEN I do not see the Member Feed icon"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": ""
+      },
+      "stepsCount": 6
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "GN79SqEqiZ1mv4",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15917",
+      "folder": {
+        "id": "1134292",
+        "name": "Member Feed"
+      },
+      "summary": "New notification indicator for currently selected adult profile",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "AND I have selected an adult user profile",
+        "step_3": "WHEN <userType> receives a notification\n\n||_userType_||\n||Ad-lite ..||\n||Ad-free user ..||\n\n",
+        "step_4": "THEN I see the Member Feed icon show a new notifications indicator in home screen"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": ""
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "zYVqf9v9hWldO3",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15921",
+      "folder": {
+        "id": "1134293",
+        "name": "Cancellation Experience"
+      },
+      "summary": "Resume subscription",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {
+        "id": 417119,
+        "name": "Done",
+        "color": "#14892c",
+        "isArchive": false
+      },
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "AND I am on the My Account screen after completing the cancellation of my subscription",
+        "step_3": "WHEN I select the Resume Subscription link",
+        "step_4": "THEN I can reactivate the subscription",
+        "step_5": "AND It displays the plan details screen in the My Account screen",
+        "step_6": "*MAX/D+ Only*: AND I receive a resume subscription confirmation email\n\n*TnT Sports*: No email is sent for the TnT Sports App."
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "How do I check for the confirmation email"
+      },
+      "stepsCount": 6
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "My48Tb4bFJVDyK",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15920",
+      "folder": {
+        "id": "1134293",
+        "name": "Cancellation Experience"
+      },
+      "summary": "User Takes One-Time Offer",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "AND I start the cancellation flow",
+        "step_3": "AND I continue the cancellation flow",
+        "step_4": "AND I am on the offer screen",
+        "step_5": "WHEN I take the one time offer",
+        "step_6": "THEN I get the confirmation success screen",
+        "step_7": "AND I see the plan details on the My Account screen",
+        "step_8": "AND I receive a save offer successfully applied email"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "",
+        "step_7": "",
+        "step_8": ""
+      },
+      "stepsCount": 8
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "l8EMS8p8i2n87A",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15923",
+      "folder": {
+        "id": "1134294",
+        "name": "Search Core"
+      },
+      "summary": "Authenticated user on a kid’s profile can get search results",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated using a kid's profile",
+        "step_2": "AND I am on the Search page",
+        "step_3": "WHEN I enter a query in the search field",
+        "step_4": "THEN I see the search prompt replaced with the query",
+        "step_5": "AND I see the recommended content replaced with search results"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "VxKqubDbFyPQmm",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15922",
+      "folder": {
+        "id": "1134294",
+        "name": "Search Core"
+      },
+      "summary": "Authenticated user can get search results",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "*GIVEN* I am an authenticated user",
+        "step_2": "*AND* I am on the Search page",
+        "step_3": "*WHEN* I enter a query in the search field",
+        "step_4": "*THEN* I see the search prompt replaced with the query",
+        "step_5": "*AND* I see the recommended content replaced with search results"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "RpygSZaZsbjNPw",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15924",
+      "folder": {
+        "id": "1134295",
+        "name": "Human / Machine : ML for End Card"
+      },
+      "summary": "User can see different type of content in the End Card recommendations",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "AND I watched a movie or a terminal episode till credit start time",
+        "step_3": "WHEN I see an End Card page with <Component> at the credit start",
+        "step_4": "THEN I can see that the <Component> contains the assets of <AssetType>"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": ""
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "3bvwSj1jUzZQVY",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 2
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15926",
+      "folder": {
+        "id": "1134296",
+        "name": "Deep Links"
+      },
+      "summary": "Deep Link to different pages for signed in user",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I logged into BEAM app with valid account",
+        "step_2": "WHEN I open the valid <Base Link> for corresponding <Client Section> ",
+        "step_3": "THEN I will be directed to following results based on platform\n\n||*_Platform_*||*_Result_*|| ||\n||*Web*|Land directly on Target Deep Link|| ||\n||*Mobile*|Land directly on Target Deep Link|| ||\n||*Roku,AndroidTV,FireTV,Vizio,Sky,Youview*|Land on Who's watching screen and after selecting adult profile will be directed to Target Deep Link| |\n|| | | |\n\nNote - Mobile and Web will have profile persistence so it will bypass profile picker screen but CTV platforms won't."
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": ""
+      },
+      "stepsCount": 3
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "8MKJILELs8Mz4E",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 2
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15925",
+      "folder": {
+        "id": "1134296",
+        "name": "Deep Links"
+      },
+      "summary": "Deep Link to different pages for unauth user",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I'm an unauth user",
+        "step_2": "WHEN I open the valid <Base Link> for corresponding <Client Section> \n\n",
+        "step_3": "AND I select Sign In CTA in the welcome screen",
+        "step_4": "AND I login with valid BEAM account",
+        "step_5": "AND I select Adult profile in Who's watching screen",
+        "step_6": "THEN I should land on the deeplink page"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": ""
+      },
+      "stepsCount": 6
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 3,
+      "id": "6EnWsWvWi7QmjZ",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-18539",
+      "folder": {
+        "id": "1134296",
+        "name": "Deep Links"
+      },
+      "summary": "Push and IAP notification deeplink for Cold Start  for signed in user.",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN User logged into the App with valid <User> .\n\nNote:\n\n* Use a *specific and distinct test user* for each scenario for accurate validation.\n*  Push/IAM Notification will trigger once App Session Start.Incase if there is delay then navigate between the  section in app to trigger the notification.\n\n",
+        "step_2": "WHEN User open the push notification on the device",
+        "step_3": "THEN User  is navigated to the expected <Landing Page> for  <Push/IAM> .\n\n"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": ""
+      },
+      "stepsCount": 3
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 4,
+      "id": "GN79SqEqiQ6x8j",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-72249",
+      "folder": {
+        "id": "1134296",
+        "name": "Deep Links"
+      },
+      "summary": "Push and IAP notification deeplink for Hot Start  for signed in user.",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": ""
+      },
+      "expectedResults": {
+        "step_1": ""
+      },
+      "stepsCount": 1
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "ZmMWU8x8i1A2Rv",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15928",
+      "folder": {
+        "id": "1134297",
+        "name": "Account Page"
+      },
+      "summary": "Kids profile user-Validate Account page",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an Authenticated user with Kids profile selected",
+        "step_2": "WHEN I navigate to account Page of Kids profile",
+        "step_3": "THEN  I see the following sub-navigation items\n\n||*_Platform_*||*_Validation_*||\n||*Web*|!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2024-10-17%2Bat%2B3.54.03%25E2%2580%25AFPM_1729194879991.png&token=336L6rKxNxID8VmKnZ9DHrq92Qnr7mu8KMbV4laNU6wrxgp3qPi5kgozWPzaCaGzK4v2GxCG7mNdVgjoFQKvJRj7JvsKjV938pvrsoRJwzgRM2IjpDzgwNn8FWOOqALaapU3JwrwJRnWI7gw9713boIa63MPMK7Gtww1PKrdg|width=200,height=183!|\n||*Mobile*|!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2024-10-17%2Bat%2B3.52.28%25E2%2580%25AFPM_1729194804490.png&token=84EjEr6LlLUplV6zgqQpfrVlLzAr1juA2Jwk7354IjZrL93QdbtMvw7WGlWrF8MZoyplMNToP4GYQNE3HV62Gly9G2FvZxN3pW6aT7gpL4jgRvHwbJANj527HQ77ow1ZZlUrWvkvWmn2Io3Ogo9yawSrojd9wnNbiRRPmYKvl|width=200,height=183!|\n||*CTV*|Settings   \n!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2024-10-17%2Bat%2B3.54.22%25E2%2580%25AFPM_1729195003858.png&token=prJ7Jd5aWah6bkrldV96s9mYLbo9GjTJDaqnlLvYi1J6kqlwQbiLY3xVokV8CmqNw1M6qlIL3ZJv9Gp5HDrdq1v5qdfDa97JpAxZsjrOnymrGgIzpJvYlD51twmmkPzaaAC8lZmZlbrycZA1RZ8xMkiwRqjvO6PbID3nL9m5g|width=200,height=183!|\n\n",
+        "step_4": "AND I navigate to different sub-navigation items",
+        "step_5": "AND All the sub navigation are loaded properly under the accounts page"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "bgYms9D9hPozVK",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15927",
+      "folder": {
+        "id": "1134297",
+        "name": "Account Page"
+      },
+      "summary": "Standard profile user-Validate Account page",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an Authenticated user with Standard Profile selected",
+        "step_2": "WHEN I navigate to account Page",
+        "step_3": "AND I navigate to different sub-navigation items\n\n||*_Platform_*||*_Validation_*||\n||*Web*|Edit profile, Settings, Account, Subscription, Privacy and terms, Help, Sign Out\n!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2024-10-17%2Bat%2B4.03.38%25E2%2580%25AFPM_1729195498069.png&token=K3yjyZzPLPImrVEo71Oms1AJaDz1wySoyan5x3gWhrE3qKDNRWhY1jVGlWGES63WQZmw3xUk1yV28LjPc7QkWJlEWkcx1walMqm8FdjgGaOjv2c6mYlJP1druaEEbVQggZuP38d832rRfGNp4GMbEKiDPay928vVfmwYpMD9j|width=200,height=183!|\n||*Mobile*|App settings, Account, Subscription, Privacy & Terms, Help, Sign Out\n!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2024-10-17%2Bat%2B4.03.52%25E2%2580%25AFPM_1729195527408.png&token=P4GjGlQ8A8U2nQm4L8P2SqjJRgzqW1HLdAKnQoP6uG14lOKazbC7wvdNyjNnCqb8MVj4bLfrkAnLPWQ9fNEyA49YAyud61vkaN98hZQ7EoOQ4aSvr98RdwvNuEmmMb4nnlIROomoOKMLfE9nNEWVPjUQGZ4mZR73HWjR6loQa|width=200,height=183!|\n||*CTV*|Play back, Account, Subscription, Privacy and Terms, Help, Info, Sign out, Note: Manage profile should separate option on CTV\n!https://qtmcloud.qmetry.com/app/inline-attachments/TESTCASE?fileName=Screenshot%2B2024-10-17%2Bat%2B4.04.08%25E2%2580%25AFPM_1729195553528.png&token=b8wGw7LKRKsnwY7pjERnUd5QAzNd49SpM4rlwPvbU6MjyQKPgdikgnYal6a8fKpLmZo7p8hbVyzvp4DPHald7NzO7dsxwvjqZomGFogjpD3gN2CxRzOPwZYns2994mZyyrHEVK3KVwY5tkv4lkGgMKsaKmo1K35qcEoRbm4D6|width=200,height=183!|\n\n",
+        "step_4": "THEN I verify All the sub navigation are loaded properly under the accounts page."
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "For launch for iOS mobile this bot(tom nav will not be visible - (Main mobile nav bar (Home, My Stuff, Download, Search)) as per GCX-14512",
+        "step_4": ""
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "2ZmqFqVqi7NxnK",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 2
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15931",
+      "folder": {
+        "id": "1134298",
+        "name": "User Profiles"
+      },
+      "summary": "PIN Validation",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I launch Beam/d+ app as an unauthenticated user",
+        "step_2": "When I am an authenticated user",
+        "step_3": "*AND* I create a profile PIN",
+        "step_4": "*AND* I select any locked profile on who's watching screen and I enter the correct PIN",
+        "step_5": "*THEN* the user profile should be unlocked and I should land to the home screen"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "Note: This step is applicable for Web only",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "7ar6tzWzHRkqL7",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15930",
+      "folder": {
+        "id": "1134298",
+        "name": "User Profiles"
+      },
+      "summary": "Kids/Family Profile Creation and Validation of content",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "AND I am on the Who's Watching Screen / Profile Picker Screen",
+        "step_3": "WHEN I start to create a new user profile",
+        "step_4": "AND I toggle the KID/FAMILY profile button in the ON state for it to become a KIDS/FAMILY profile",
+        "step_5": "AND I select the newly created KIDS/FAMILY profile",
+        "step_6": "THEN I should see filtered KID/FAMILY content on all relevant screens"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "note: Kids (MAX) / Family (D+) mode off by default",
+        "step_4": "",
+        "step_5": "",
+        "step_6": ""
+      },
+      "stepsCount": 6
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 3,
+      "id": "gK6rTo8osQy6JN",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15929",
+      "folder": {
+        "id": "1134298",
+        "name": "User Profiles"
+      },
+      "summary": "Standard Profile Creation",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "Given I am an Authenticated user",
+        "step_2": "WHEN I am on the Who is watching/Manage profile screen",
+        "step_3": "AND I select the Add Profile CTA",
+        "step_4": "AND I select a Profile Picture",
+        "step_5": "AND I add a Name",
+        "step_6": "AND I select the Save CTA",
+        "step_7": "THEN I should be directed to the Who is watching screen."
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "",
+        "step_7": ""
+      },
+      "stepsCount": 7
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "wo97CN3NHGJby2",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15934",
+      "folder": {
+        "id": "1134299",
+        "name": "Android Auto OS"
+      },
+      "summary": "Starting to Drive while Browsing or Playing Video",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "WHEN I am not driving a car",
+        "step_3": "AND I am ‹doing› in Max App\n |||_doing_||\n ||| browsing|\n ||| playing VOD content|\n ||| playing Live content|\n ||| playing Live Linear content|",
+        "step_4": "AND I start to drive the car",
+        "step_5": "THEN I am prompted system message that Max app is not usable and the playback is paused"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "Note: Car is fully stopped or the Gear is on Park or Neutral status",
+        "step_3": "",
+        "step_4": "Note: Gear into Drive or Reverse status",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 2,
+      "id": "q7p8uJ4JI2dro1",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15933",
+      "folder": {
+        "id": "1134299",
+        "name": "Android Auto OS"
+      },
+      "summary": "Safe Area App rendering",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "WHEN I am not driving a car",
+        "step_3": "AND I browse the Max app",
+        "step_4": "THEN the App should render in Safe Area",
+        "step_5": "AND MAX UX should not be hidden by System overlays"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "Note: Car is fully stopped or the Gear is on Park or Neutral status",
+        "step_3": "",
+        "step_4": "",
+        "step_5": ""
+      },
+      "stepsCount": 5
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 3,
+      "id": "x1M2SdEdFljJO9",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15932",
+      "folder": {
+        "id": "1134299",
+        "name": "Android Auto OS"
+      },
+      "summary": "Interacting with Max while Driving",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {},
+      "stepDetails": {
+        "step_1": "GIVEN I am an authenticated user",
+        "step_2": "WHEN I am driving a car",
+        "step_3": "AND I attempt to ‹do› in Max App\n\n||_do_||\n||browse||\n||play VOD content||\n||play Live content||\n||play Live Linear content||\n\n",
+        "step_4": "THEN I am prompted system message that Max app is not usable"
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": ""
+      },
+      "stepsCount": 4
+    },
+    {
+      "shareable": false,
+      "archived": false,
+      "orderNo": 1,
+      "id": "7ar6tzWzHROM2a",
+      "version": {
+        "isLatestVersion": true,
+        "versionNo": 1
+      },
+      "projectId": 10081,
+      "key": "GQA-TC-15314",
+      "folder": {
+        "id": "2005921",
+        "name": "Compliance_Consent"
+      },
+      "summary": "Create Account - Consent, Notices, & Disclosure - US/GLOBAL",
+      "priority": {
+        "id": 219960,
+        "name": "P0",
+        "iconUrl": "https://s3.us-east-1.amazonaws.com/qtm4j-cloud-prod-4/staticResources/priorityIcons/client/7164/Screenshot 2025-08-17 at 1.19.33 PM_ZaZMFZaduQ.png",
+        "isArchive": false
+      },
+      "status": {
+        "id": 417119,
+        "name": "Done",
+        "color": "#14892c",
+        "isArchive": false
+      },
+      "stepDetails": {
+        "step_1": "GIVEN I am a Unauthenticated User",
+        "step_2": "AND I open the App for the first time in <Country>",
+        "step_3": "AND I see expected <Consent Experience> Based on my <country>",
+        "step_4": "AND I select \"Privacy & Legal\" option from the Paywall",
+        "step_5": "And I select \"Manage Cookies\" option",
+        "step_6": "And I scroll through list",
+        "step_7": "AND I return to Paywall and  select \"Subscribe Now\" button",
+        "step_8": "AND I select any plan on Plan Picker page",
+        "step_9": "AND I am presented with the Create Account screen page",
+        "step_10": "AND I am presented with the disclosure appropriate to <Country Language>",
+        "step_11": "(As Applicable) AND I see withdraw consent language that explains how a user can withdraw or update their consent after creating an account appropriate to <Country Language>",
+        "step_12": "AND the following:\n\n*  Privacy Policy (hbom[ax.com/privacy / discoveryplus/com/privacy)|http://max.com/privacy]\n* Terms of Use (hbom[ax.com/terms-of-use / http://discoveryplus.com/terms)|http://max.com/terms-of-use]\n* Affiliates ([http://hbomax.com/affiliates|http://max.com/affiliates] / [http://disocvery.com/affilates|http://disocvery.com/affilates])\n* Child Privacy Policy (hbom[ax.com/children / http://discoveryplus.com/privacy/children)|http://max.com/children]\n* AdChoices (where supported) ([https://www.wbdprivacy.com/policycenter/b2c/|https://www.wbdprivacy.com/policycenter/b2c/])\n* Legal Info (where supported) ([discoveryplus.com/|http://discoveryplus.com/privacy/children]legal-info)\n\nwill link to the <Hub Landing Pages>",
+        "step_13": "(WebMo ONLY) AND the <Hub Landing Pages> have US, Latin American and Caribbean , European, and APAC sections containing links to <Country Languages>",
+        "step_14": "(WebMo ONLY) AND Each Privacy Policies opens in appropriate <Country Languages>",
+        "step_15": "WHEN I make elections (as applicable for region) and select to \"Create Account\"",
+        "step_16": "AND my elections are saved",
+        "step_17": "And my New User is created ",
+        "step_18": "THEN I can look in Sonic Studio for my created User and see the elections made are reflected correctly.  "
+      },
+      "expectedResults": {
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": "",
+        "step_5": "",
+        "step_6": "",
+        "step_7": "",
+        "step_8": "",
+        "step_9": "",
+        "step_10": "*COPY EXAMPLES*\n\n*US- By selecting Create Account, you agree to our* [*Terms of Use*|http://max.com/terms-of-use] *and acknowledge you have read our* [*Privacy Policy*|http://max.com/privacy]*. You also agree to receive ads and offers from Max and our* [*Affiliates*|http://max.com/affiliates]*. You may learn more about your rights and choices in the Privacy Policy.*\n\n*LATAM- By selecting Create Account you confirm you are at least 18 years old and you agree to our* [*Terms of Use*|http://max.com/terms-of-use] *and* [*Privacy Policy*|http://max.com/privacy] *allowing Max and* [*Affiliates*|http://max.com/affiliates] *to use your information for updates, ads and offers. If you let a child use this account, processing their personal information is necessary to provide services. For more information, visit the* [*Children’s Privacy Policy*|http://max.com/privacy/children]*. You may learn more about your rights and choices in the Privacy Policy.*",
+        "step_11": "Key update to disclosure includes: \"*You may learn more about your rights and choices in the Privacy Policy.*\" for these regions",
+        "step_12": "",
+        "step_13": "",
+        "step_14": "",
+        "step_15": "",
+        "step_16": "",
+        "step_17": "",
+        "step_18": ""
+      },
+      "stepsCount": 18
+    }
+  ]
+}
