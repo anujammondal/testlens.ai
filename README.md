@@ -27,13 +27,27 @@ pip install -r requirements.txt
 # Configure (copy and edit .env)
 cp .env.example .env
 
-# Pipeline: fetch → embeddings → duplicate report
-python src/qMetryIntegration/fetchTestCasesWithQParam.py
-python src/qMetryIntegration/createSemanticEmbeddings.py
-python src/qMetryIntegration/generateDuplicateReport.py
+# Run full pipeline (fetch -> embeddings -> report)
+python index.py
 
 # Open report
-open duplicate_testcases_report.html
+open reports/duplicate_testcases_report.html
+```
+
+---
+
+## Output Locations
+
+- `reports/duplicate_testcases_report.html` — generated duplicate report
+- `embeddings_output/qmetry_testcases.json` — fetched raw QMetry test cases
+- `embeddings_output/qmetry_testcases_embeddings.json` — test cases with normalized summaries + embeddings
+- `embeddings_output/qmetry_embeddings.npy` — NumPy embedding matrix
+
+If your pipeline generated outputs in the project root, move them with:
+
+```bash
+mkdir -p embeddings_output
+mv qmetry_testcases.json qmetry_testcases_embeddings.json qmetry_embeddings.npy embeddings_output/
 ```
 
 ---
@@ -42,6 +56,7 @@ open duplicate_testcases_report.html
 
 ```
 testlens.ai/
+├── index.py                           # End-to-end pipeline runner
 ├── src/qMetryIntegration/
 │   ├── fetchTestCasesWithQParam.py   # Fetch from QMetry API
 │   ├── createSemanticEmbeddings.py  # Create embeddings
@@ -51,6 +66,9 @@ testlens.ai/
 │   └── searchQdrant.py               # Search Qdrant (optional)
 ├── docs/
 │   └── DUPLICATE_REPORTS.md         # Full documentation
+├── embeddings_output/                # JSON + NPY embedding artifacts
+├── reports/
+│   └── duplicate_testcases_report.html
 ├── requirements.txt
 ├── .env.example
 └── README.md
