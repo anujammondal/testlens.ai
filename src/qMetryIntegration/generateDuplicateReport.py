@@ -255,7 +255,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 def generate_report(
     embeddings_file: str = "qmetry_testcases_embeddings.json",
-    output_file: str = "duplicate_testcases_report.html",
+    output_file: str = "reports/duplicate_testcases_report.html",
     project_root: Optional[Path] = None,
     threshold: float = 0.92,
 ) -> Path:
@@ -266,6 +266,7 @@ def generate_report(
     """
     project_root = project_root or Path(__file__).resolve().parent.parent.parent
     output_path = project_root / output_file
+    output_path.parent.mkdir(parents=True, exist_ok=True)
 
     finder = DuplicateTestCaseFinder(
         embeddings_file=embeddings_file,
@@ -315,7 +316,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--output", "-o",
-        default="duplicate_testcases_report.html",
+        default="reports/duplicate_testcases_report.html",
         help="Output HTML file path",
     )
     parser.add_argument(
