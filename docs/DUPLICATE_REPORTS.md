@@ -34,12 +34,10 @@ cp .env.example .env
 # Edit .env and add your QMETRY_API_KEY
 
 # 4. Run the full pipeline
-python src/qMetryIntegration/fetchTestCasesWithQParam.py
-python src/qMetryIntegration/createSemanticEmbeddings.py
-python src/qMetryIntegration/generateDuplicateReport.py
+python index.py
 
 # 5. Open the report
-open duplicate_testcases_report.html
+open reports/duplicate_testcases_report.html
 ```
 
 ---
@@ -58,7 +56,7 @@ open duplicate_testcases_report.html
 │  createSemanticEmbeddings.py     │  Creates normalized summaries + embeddings
 │  Input: qmetry_testcases.json    │
 │  Output: qmetry_testcases_       │
-│          embeddings.json         │
+│          embeddings.json + .npy  │
 └───────────────┬─────────────────┘
                 │
                 ▼
@@ -66,8 +64,8 @@ open duplicate_testcases_report.html
 │  generateDuplicateReport.py     │  Finds duplicates & generates HTML
 │  Input: qmetry_testcases_       │
 │         embeddings.json         │
-│  Output: duplicate_testcases_   │
-│          report.html            │
+│  Output: reports/duplicate_     │
+│          testcases_report.html  │
 └─────────────────────────────────┘
 ```
 
@@ -150,8 +148,15 @@ python src/qMetryIntegration/generateDuplicateReport.py
 
 **Options:**
 - `-f, --file` — Embeddings JSON path (default: `qmetry_testcases_embeddings.json`)
-- `-o, --output` — Output HTML path (default: `duplicate_testcases_report.html`)
+- `-o, --output` — Output HTML path (default: `reports/duplicate_testcases_report.html`)
 - `-t, --threshold` — Embedding similarity threshold 0–1 (default: 0.92)
+
+If your embeddings file is in `embeddings_output`, run:
+
+```bash
+python src/qMetryIntegration/generateDuplicateReport.py \
+  -f embeddings_output/qmetry_testcases_embeddings.json
+```
 
 ---
 
@@ -205,10 +210,17 @@ merged = finder.merge_groups(groups)
 
 | File | Description |
 |------|-------------|
-| `qmetry_testcases.json` | Raw test cases from QMetry (gitignored) |
-| `qmetry_testcases_embeddings.json` | Test cases + normalized summaries + embeddings (gitignored) |
-| `qmetry_embeddings.npy` | NumPy array of embeddings (gitignored) |
-| `duplicate_testcases_report.html` | HTML duplicate report (gitignored) |
+| `embeddings_output/qmetry_testcases.json` | Raw test cases from QMetry (gitignored) |
+| `embeddings_output/qmetry_testcases_embeddings.json` | Test cases + normalized summaries + embeddings (gitignored) |
+| `embeddings_output/qmetry_embeddings.npy` | NumPy array of embeddings (gitignored) |
+| `reports/duplicate_testcases_report.html` | HTML duplicate report (gitignored) |
+
+If outputs are generated in project root, move them into `embeddings_output`:
+
+```bash
+mkdir -p embeddings_output
+mv qmetry_testcases.json qmetry_testcases_embeddings.json qmetry_embeddings.npy embeddings_output/
+```
 
 ---
 
