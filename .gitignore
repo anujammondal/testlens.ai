@@ -1,3 +1,5 @@
 .env
 qmetry_embeddings.npy
 src/qMetryIntegration/__pycache__/findDuplicateTestCases.cpython-314.pyc
+reports/
+embeddings_output/
